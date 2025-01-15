@@ -3,7 +3,6 @@ const global = {};
 function resetGlobals(){
 global.canvas = document.querySelector("#canvas");
 global.ctx = canvas.getContext("2d");
-global.prevTotalRunningTime = 0;
 global.deltaTime = 0;
 global.allGameObjects = [];
 global.playerObject = {};
@@ -13,7 +12,11 @@ global.gravityForce = 9.8;
 global.pixelToMeter = 100;
 global.leftMoveTrigger;
 global.rightMoveTrigger;
+global.gameRunning = true;
 }
+
+global.prevTotalRunningTime = 0;
+
 
 global.getCanvasBounds = function () {
     let bounds =  {
@@ -56,4 +59,4 @@ global.detectBoxCollision = function (gameObject1, gameObject2) {
 }
 
 
-export { global, resetGlobals }
+export { global, resetGlobals };

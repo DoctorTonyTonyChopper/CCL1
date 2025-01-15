@@ -1,6 +1,7 @@
 import { BaseGameObject } from "./baseGameObject.js";
 import { global } from "../modules/global.js";
 import { setupGame, displayGameOverScreen } from "../modules/main.js";
+import { Shuriken } from "./shuriken.js";
 
 
 class Skeleton extends BaseGameObject {
@@ -13,7 +14,7 @@ class Skeleton extends BaseGameObject {
     hasCollided = false;
     canTakeDamage = true;
     timeoutDamage = 0;
-
+    faceRight = true;
 
     reactToCollision = function (collidingObject) {
         if (collidingObject.name == "Heart") {
@@ -103,6 +104,13 @@ class Skeleton extends BaseGameObject {
 
         
     }
+
+    throwing = function() {
+            new Shuriken(global.playerObject.faceRight == true ? global.playerObject.x - 15 + global.playerObject.width : global.playerObject.x, global.playerObject.y, 40, 40, global.playerObject.faceRight);
+    }
+    
 }
+
+
 
 export { Skeleton }

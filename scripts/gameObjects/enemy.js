@@ -1,5 +1,6 @@
 import { BaseGameObject } from "./baseGameObject.js";
 import { global } from "../modules/global.js";
+import { Shuriken } from "./shuriken.js";
 
 class Enemy extends BaseGameObject {
     name = "Enemy";
@@ -21,11 +22,14 @@ reactToCollision = function (collidingObject) {
     }
 */
 
-/* 🟡🟡 /SHURIKEN COLLISION DETECTION !!! 🟡🟡
+// 🟡🟡 /SHURIKEN COLLISION DETECTION !!! 🟡🟡 
+    reactToCollision = function (collidingObject) {   
     if (collidingObject.name == "Shuriken") { // SKELETON SHOULD DISAPPEAR ONCE COLLIDING WITH THE SHURIKEN
-        this.active = false; // or this.setVisible(false)
-    } 
-*/
+            this.active = false; // or this.setVisible(false) 
+            // collidingObject.name.active = false; //❌❌❌❌❌❌❌❌❌
+        } 
+}
+
 
 
 
