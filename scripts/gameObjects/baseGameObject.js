@@ -13,6 +13,7 @@ class BaseGameObject {
     blockGravityForces = false;
     prevFallingVelocity = 0;
     index = -1;
+    
 
     physicsData = {
         "fallVelocity": 0,
@@ -52,7 +53,7 @@ class BaseGameObject {
     };
 
     applyGravity = function () {
-        if (!this.useGravityForces)
+        if (!this.useGravityForces || !global.gameRunning)
             return;
        
         this.physicsData.fallVelocity += global.gravityForce * global.deltaTime * global.pixelToMeter;
