@@ -7,6 +7,8 @@ import { Heart } from "../gameObjects/heart.js";
 import { Enemy } from "../gameObjects/enemy.js";
 import { Shuriken } from "../gameObjects/shuriken.js";
 import { Bed } from "../gameObjects/bed.js";
+import {backgroundMusic, dmgEffect, healthEffect } from "./sound.js";
+
 
 let gameOverButton = document.getElementById("gameOverButton");
 gameOverButton.addEventListener("click", setupGame);
@@ -17,7 +19,15 @@ gameStartButton.addEventListener("click", () => {
     // Hide the game start screen
     let gameStartScreen = document.getElementById("gameStartScreen");
     gameStartScreen.style.display = "none";
+    // Start the game setup
+    displayStoryScreen();
+});
 
+let startButton = document.getElementById("startButton");
+    startButton.addEventListener("click", () => {
+    // Hide the game start screen
+    let storyScreen = document.getElementById("storyScreen");
+    storyScreen.style.display = "none";
     // Start the game setup
     setupGame();
 });
@@ -30,11 +40,21 @@ function displayGameOverScreen () {
 
  function displayGameStartScreen (){
     let gameStartScreen = document.getElementById("gameStartScreen");
-    gameStartScreen.style.display = "none";
+    gameStartScreen.style.display = "block";
 
 }
 
-function gameLoop(totalRunningTime) { 
+function displayStoryScreen (){
+    let storyScreen = document.getElementById("storyScreen");
+    storyScreen.style.display = "block";
+
+}
+
+
+function gameLoop(totalRunningTime) {
+    if (global.prevTotalRunningTime == 0) {
+        global.prevTotalRunningTime = totalRunningTime;
+    }
 
     if(global.playerObject.currentHealth <= 0){
         displayGameOverScreen();
@@ -66,9 +86,13 @@ function gameLoop(totalRunningTime) {
 function setupGame() {
     let gameOverScreen = document.getElementById("gameOverScreen");
     gameOverScreen.style.display = "none";
+
+    let storyScreen = document.getElementById("storyScreen");
+    storyScreen.style.display = "none";
+
+    backgroundMusic.play();
+
     resetGlobals();
-
-
     global.playerObject = new Skeleton(0, 400, 64, 64);
     global.leftMoveTrigger = new MoveTrigger(0, 100, 20, 900, 100);
     global.rightMoveTrigger = new MoveTrigger(800, 100, 20, 900, -100);
@@ -97,7 +121,7 @@ function setupGame() {
     requestAnimationFrame(gameLoop);
 }
 
-setupGame();
+
 
 export {setupGame, displayGameOverScreen, displayGameStartScreen};
 

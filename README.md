@@ -42,19 +42,34 @@ Plan for the day:
 - Restart Game/Game Over screen ✅
 - Home screen (with start button) ✅
 - Level design 👨🏽‍🔧
-    - maybe more level?
+    - maybe more level? 👨🏽‍🔧
+- Add sound effects 
+    - when colliding with hearts ✅
+    - background music ✅
+    - when player touches enemy (damage effect) ✅
+    - when enemy dies ✅
+    - when thworing shuriken 👨🏽‍🔧
+- Text after starting the game for the first time where story is explained (as a picture probably)
+
 
 PROBLEMS OCCURED:
 
 
 ### For the coming days
-
+- TRIM SOUND EFFECTS!!!!! (to be shorter) 👨🏽‍🔧
 - Player blinks red when come in touch with enemies OR the canvas becomes red for a second? 👨🏽‍🔧 
 - different sprites for the enemy when it moves 👨🏽‍🔧
 - more levels and how we reach the new levels (erst wenn alle functionalities in einem level zb waffen) 👨🏽‍🔧
 
 - Nice border around canvas 👨🏽‍🔧
-- Make assets (sprites for player, enemies, background, blocks, etc.) 👨🏽‍🔧
+- Draw a nice home screen 👨🏽‍🔧
+- Draw a nice replay/game over screen 👨🏽‍🔧
+- Make assets 👨🏽‍🔧
+    - player sprites
+    - enemy sprites
+    - paint background + floor
+    - block sprites 
+    - ...?
 
 
 - enemy strength? 👨🏽‍🔧

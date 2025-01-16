@@ -2,6 +2,7 @@ import { BaseGameObject } from "./baseGameObject.js";
 import { global } from "../modules/global.js";
 import { setupGame, displayGameOverScreen } from "../modules/main.js";
 import { Shuriken } from "./shuriken.js";
+import {dmgEffect, healthEffect } from "../modules/sound.js";
 
 
 class Skeleton extends BaseGameObject {
@@ -14,13 +15,13 @@ class Skeleton extends BaseGameObject {
     hasCollided = false;
     canTakeDamage = true;
     timeoutDamage = 0;
-    faceRight = true;
+    faceRight = false;
 
     reactToCollision = function (collidingObject) {
         if (collidingObject.name == "Heart") {
             this.changeCurrentHealth(1);
             console.log(this.currentHealth);
-
+            healthEffect.play();
         }
         if(collidingObject.name == "Enemy") {
             this.changeCurrentHealth(-1);
@@ -31,6 +32,7 @@ class Skeleton extends BaseGameObject {
             } else if (this.x > collidingObject.x) { // collision from the right
                 this.x += 100;
             }
+            dmgEffect.play();
         }
     } 
     

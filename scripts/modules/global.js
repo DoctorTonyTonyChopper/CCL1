@@ -13,9 +13,8 @@ global.pixelToMeter = 100;
 global.leftMoveTrigger;
 global.rightMoveTrigger;
 global.gameRunning = true;
-}
-
 global.prevTotalRunningTime = 0;
+}
 
 
 global.getCanvasBounds = function () {
