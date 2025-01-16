@@ -6,6 +6,7 @@ import { Floor } from "../gameObjects/floor.js";
 import { Heart } from "../gameObjects/heart.js";
 import { Enemy } from "../gameObjects/enemy.js";
 import { Shuriken } from "../gameObjects/shuriken.js";
+import { Bed } from "../gameObjects/bed.js";
 
 let gameOverButton = document.getElementById("gameOverButton");
 gameOverButton.addEventListener("click", setupGame);
@@ -14,6 +15,11 @@ function displayGameOverScreen () {
     let gameOverScreen = document.getElementById("gameOverScreen");
     gameOverScreen.style.display = "block";
 
+}
+
+function displayRestartScreen (){
+let gameOverScreen = document.getElementById("nextLvlScreen");
+gameOverScreen.style.display = "block";
 }
 
 function gameLoop(totalRunningTime) { 
@@ -60,6 +66,7 @@ function setupGame() {
     new BlockObject(400, 200, 50, 50);
     new Heart(400, 200, 50, 50);
     new Enemy(500, 400, 50, 50);
+    new Bed(1000, 350, 50, 50);
 
 
 

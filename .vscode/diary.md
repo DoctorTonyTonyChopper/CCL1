@@ -35,10 +35,18 @@ Plan for the day:
 PROBLEMS OCCURED: GAME STOPS ONCE THE SHURIKEN REACHES THE END OF THE CANVAS. -- SOLVED ✅
 I WANT THE SHURIKEN TO DISAPPEAR ONCE IT HITS THE ENEMY AND IF IT DOES NOT HIT AN ENEMY I WANT IT TO DISAPPEAR AFTER A SET AMOUNT OF TIME. -- SOLVED ✅
 
+### Day 4 16-01-2025
+
+Plan for the day: 
+- Restart Game/Game Over screen ✅
+- Home screen (with start button) 👨🏽‍🔧
+- Level design 👨🏽‍🔧
+
+
+
+
 ### For the coming days
 
-- Game Over screen 👨🏽‍🔧
-- Home screen (with start button) 👨🏽‍🔧
 - Nice border around canvas 👨🏽‍🔧
 - Make assets (sprites for player, enemies, background, blocks, etc.) 👨🏽‍🔧
 - Player blinks red when come in touch with enemies OR the canvas becomes red for a second? 👨🏽‍🔧
