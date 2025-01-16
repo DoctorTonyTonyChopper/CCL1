@@ -2,15 +2,15 @@ import { BaseGameObject } from "./baseGameObject.js";
 import { global } from "../modules/global.js";
 import { displayGameOverScreen } from "../modules/main.js";
 import { openingDoor } from "../modules/sound.js";
+import { setupGame2 } from "../modules/main.js";
 
 
-class Bed extends BaseGameObject {
+class Door2 extends BaseGameObject {
     blockGravityForces = true;
 
     reactToCollision = function (collidingObject)   {
         if (collidingObject.name == "Skeleton") {
-            openingDoor.play();
-            displayGameOverScreen();
+            setupGame2();
 
         }
     }
@@ -21,4 +21,4 @@ class Bed extends BaseGameObject {
     }
 }
 
-export { Bed };
+export {Door2};
