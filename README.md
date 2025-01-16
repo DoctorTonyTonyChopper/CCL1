@@ -30,6 +30,7 @@ Plan for the day:
     - Shuriken should disappear after 0.25 seconds ✅
     - Player should throw the Shuriken to the direction they are facing ✅
     - different sprite for when the player shoots the shuriken(?) ❌
+- Set up Github properly, learn how to push and pull ✅
 
 
 PROBLEMS OCCURED: GAME STOPS ONCE THE SHURIKEN REACHES THE END OF THE CANVAS. -- SOLVED ✅
@@ -39,19 +40,24 @@ I WANT THE SHURIKEN TO DISAPPEAR ONCE IT HITS THE ENEMY AND IF IT DOES NOT HIT A
 
 Plan for the day: 
 - Restart Game/Game Over screen ✅
-- Home screen (with start button) 👨🏽‍🔧
+- Home screen (with start button) ✅
 - Level design 👨🏽‍🔧
+    - maybe more level?
 
-
+PROBLEMS OCCURED:
 
 
 ### For the coming days
 
+- Player blinks red when come in touch with enemies OR the canvas becomes red for a second? 👨🏽‍🔧 
+- different sprites for the enemy when it moves 👨🏽‍🔧
+- more levels and how we reach the new levels (erst wenn alle functionalities in einem level zb waffen) 👨🏽‍🔧
+
 - Nice border around canvas 👨🏽‍🔧
 - Make assets (sprites for player, enemies, background, blocks, etc.) 👨🏽‍🔧
-- Player blinks red when come in touch with enemies OR the canvas becomes red for a second? 👨🏽‍🔧
-- more levels and how we reach the new levels (erst wenn alle functionalities in einem level zb waffen) 👨🏽‍🔧
-- different sprites for the enemy when it moves 👨🏽‍🔧
+
+
+- enemy strength? 👨🏽‍🔧
 
 
 

@@ -11,18 +11,31 @@ import { Bed } from "../gameObjects/bed.js";
 let gameOverButton = document.getElementById("gameOverButton");
 gameOverButton.addEventListener("click", setupGame);
 
+// Start Game Button
+let gameStartButton = document.getElementById("gameStartButton");
+gameStartButton.addEventListener("click", () => {
+    // Hide the game start screen
+    let gameStartScreen = document.getElementById("gameStartScreen");
+    gameStartScreen.style.display = "none";
+
+    // Start the game setup
+    setupGame();
+});
+
 function displayGameOverScreen () {
     let gameOverScreen = document.getElementById("gameOverScreen");
     gameOverScreen.style.display = "block";
 
 }
 
-function displayRestartScreen (){
-let gameOverScreen = document.getElementById("nextLvlScreen");
-gameOverScreen.style.display = "block";
+ function displayGameStartScreen (){
+    let gameStartScreen = document.getElementById("gameStartScreen");
+    gameStartScreen.style.display = "none";
+
 }
 
 function gameLoop(totalRunningTime) { 
+
     if(global.playerObject.currentHealth <= 0){
         displayGameOverScreen();
         global.gameRunning = false;
@@ -64,10 +77,13 @@ function setupGame() {
     new Floor(0, 400, 9000, 50);
     new BlockObject(200, 280, 50, 50);
     new BlockObject(400, 200, 50, 50);
+    new BlockObject(400, 200, 50, 50);
+
     new Heart(400, 200, 50, 50);
     new Enemy(500, 400, 50, 50);
-    new Bed(1000, 350, 50, 50);
+    new Bed(1300, 350, 50, 50);
 
+    console.log(global.playerObject)
 
 
 
@@ -83,8 +99,7 @@ function setupGame() {
 
 setupGame();
 
-
-export {setupGame, displayGameOverScreen};
+export {setupGame, displayGameOverScreen, displayGameStartScreen};
 
 
 
