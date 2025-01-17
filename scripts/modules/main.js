@@ -7,7 +7,6 @@ import { Heart } from "../gameObjects/heart.js";
 import { Enemy } from "../gameObjects/enemy.js";
 import { Shuriken } from "../gameObjects/shuriken.js";
 import { Door } from "../gameObjects/door.js";
-import { Door2 } from "../gameObjects/door2.js";
 import { Bed } from "../gameObjects/bed.js";
 import {backgroundMusic, dmgEffect, healthEffect } from "./sound.js";
 
@@ -137,45 +136,9 @@ function setupGame1() {
 
 
     new Floor(0, 400, 9000, 50);
-    /*new BlockObject(200, 280, 50, 50);
-    new BlockObject(400, 200, 50, 50);
-    new BlockObject(400, 200, 50, 50);*/
-    new Heart(400, 200, 50, 50);
-    new Enemy(500, 400, 50, 50);
-    new Door2(1300, 350, 50, 50);
-
-    console.log(global.playerObject)
-
-
-
-    // setup your game here - means: Create instances of the GameObjects that belong to your game.
-    // e.g.: 
-    /*    
-                global.playerObject = new PacMan(200, 300, 60, 60);
-                new Wall(0, 0, 100, 100);
-                new Candy(100, 100, 100, 100);
-    }*/
-    requestAnimationFrame(gameLoop);
-}
-
-function setupGame2() {
-    let gameOverScreen = document.getElementById("gameOverScreen");
-    gameOverScreen.style.display = "none";
-
-
-    backgroundMusic.play();
-
-    resetGlobals();
-    global.playerObject = new Skeleton(0, 400, 64, 64);
-    global.leftMoveTrigger = new MoveTrigger(0, 100, 20, 900, 100);
-    global.rightMoveTrigger = new MoveTrigger(800, 100, 20, 900, -100);
-
-
-    new Floor(0, 400, 9000, 50);
     new BlockObject(200, 280, 50, 50);
-    /*new BlockObject(400, 200, 50, 50);*/
     new BlockObject(400, 200, 50, 50);
-
+    new BlockObject(400, 200, 50, 50);
     new Heart(400, 200, 50, 50);
     new Enemy(500, 400, 50, 50);
     new Bed(1300, 350, 50, 50);
@@ -197,7 +160,7 @@ function setupGame2() {
 
 
 
-export {setupGame, displayGameOverScreen, displayGameStartScreen, setupGame1, setupGame2};
+export {setupGame, displayGameOverScreen, displayGameStartScreen, displayStoryScreen, setupGame1};
 
 
 

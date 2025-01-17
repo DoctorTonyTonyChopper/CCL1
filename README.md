@@ -12,6 +12,8 @@ Plan for the day:
 - centered canvas ✅
 - made a new heart.js ✅
 
+PROBLEMS OCCURED: --
+
 ### Day 2 14-01-2025
 
 Plan for the day:
@@ -19,6 +21,8 @@ Plan for the day:
     - different sprites for the enemy when it moves ❌
 - Make damage mechanic (when player touches enemies, health--) ✅
 - Working restart button (the game should reset when pressed) ❌
+
+PROBLEMS OCCURED: --
 
 
 ### Day 3 15-01-2025
@@ -52,13 +56,24 @@ Plan for the day:
 - Text after starting the game for the first time where story is explained (as a picture probably)
 
 
-PROBLEMS OCCURED:
+PROBLEMS OCCURED: --
+
+### Day 5 17-01-2025
+
+Plan for the day:
+- Make two levels ✅
+
+PROBLEMS OCCURED: --
+
 
 
 ### For the coming days
 - TRIM SOUND EFFECTS!!!!! (to be shorter) 👨🏽‍🔧
 - Player blinks red when come in touch with enemies OR the canvas becomes red for a second? 👨🏽‍🔧 
+- Design levels!!!!!
+
 - different sprites for the enemy when it moves 👨🏽‍🔧
+
 - more levels and how we reach the new levels (erst wenn alle functionalities in einem level zb waffen) 👨🏽‍🔧
 
 - Nice border around canvas 👨🏽‍🔧

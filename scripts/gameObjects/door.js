@@ -21,4 +21,4 @@ class Door extends BaseGameObject {
     }
 }
 
-export {Door};
+export { Door };
