@@ -28,7 +28,7 @@ PROBLEMS OCCURED: --
 ### Day 3 15-01-2025
 
 Plan for the day:
-- Game Over screen ❌
+- Restart Game/Game Over screen ❌
     - Working restart button(the game should reset when pressed) ✅
 - Make shuriken throwing mechanic (when they touch enemies, they die) ✅
     - Shuriken should disappear after 0.25 seconds ✅
@@ -62,6 +62,7 @@ PROBLEMS OCCURED: --
 
 Plan for the day:
 - Make two levels ✅
+- Work on the background of the game ✅
 
 PROBLEMS OCCURED: --
 
@@ -69,6 +70,7 @@ PROBLEMS OCCURED: --
 
 ### For the coming days
 - TRIM SOUND EFFECTS!!!!! (to be shorter) 👨🏽‍🔧
+
 - Player blinks red when come in touch with enemies OR the canvas becomes red for a second? 👨🏽‍🔧 
 - Design levels!!!!!
 
@@ -78,6 +80,7 @@ PROBLEMS OCCURED: --
 
 - Nice border around canvas 👨🏽‍🔧
 - Draw a nice home screen 👨🏽‍🔧
+- Draw a cool story screen 👨🏽‍🔧
 - Draw a nice replay/game over screen 👨🏽‍🔧
 - Make assets 👨🏽‍🔧
     - player sprites

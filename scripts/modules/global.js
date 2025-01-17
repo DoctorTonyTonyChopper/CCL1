@@ -7,7 +7,7 @@ global.deltaTime = 0;
 global.allGameObjects = [];
 global.playerObject = {};
 global.backgroundShift = 0;
-global.backgroundMaxShift = -1500;
+global.backgroundMaxShift = -1000;
 global.gravityForce = 9.8;
 global.pixelToMeter = 100;
 global.leftMoveTrigger;
