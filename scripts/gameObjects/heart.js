@@ -39,7 +39,7 @@ class Heart extends BaseGameObject {
 
     constructor(x, y, width, height) {
         super(x, y, width, height);
-        this.loadImages(["./images/apple.png"]);
+        this.loadImages(["./images/heart.png"]);
     }
 }
 

@@ -17,7 +17,7 @@ class Bed extends BaseGameObject {
 
     constructor (x, y, width, height) {
         super(x, y, width, height);
-        this.loadImages(["./images/wall.jpg"]);
+        this.loadImages(["./images/bed.png"]);
     }
 }
 

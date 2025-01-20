@@ -63,7 +63,7 @@ class Skeleton extends BaseGameObject {
     constructor(x, y, width, height) {
         super(x, y, width, height);
         //this.loadImages(["./images/apple.png"]);
-        this.loadImagesFromSpritesheet("./images/BODY_skeleton.png", 9, 4, 9);
+        this.loadImagesFromSpritesheet("./images/BODY_player.png", 9, 4, 9);
         this.switchCurrentSprites(18, 18);
         this.updateHealthDisplay();
     }
@@ -73,7 +73,7 @@ class Skeleton extends BaseGameObject {
         healthContainer.innerHTML = "";
         for (let i = 0; i < this.currentHealth; i++) {
             let heart = document.createElement("img");
-            heart.src = "./images/apple.png";
+            heart.src = "./images/heart.png";
             heart.classList.add("heart");
             healthContainer.appendChild(heart);
         }

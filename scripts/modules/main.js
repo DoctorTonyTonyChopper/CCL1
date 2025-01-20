@@ -106,7 +106,8 @@ function setupGame() {
 
     new Heart(400, 200, 50, 50);
     new Enemy(500, 400, 50, 50);
-    new Door(1300, 350, 50, 50);
+    new Door(1775, 300, 85, 100);
+
 
     console.log(global.playerObject)
 
@@ -139,9 +140,10 @@ function setupGame1() {
     new BlockObject(200, 280, 50, 50);
     new BlockObject(400, 200, 50, 50);
     new BlockObject(400, 200, 50, 50);
+
     new Heart(400, 200, 50, 50);
     new Enemy(500, 400, 50, 50);
-    new Bed(1300, 350, 50, 50);
+    new Bed(1750, 275, 75, 150);
 
     console.log(global.playerObject)
 

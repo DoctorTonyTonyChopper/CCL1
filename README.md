@@ -62,10 +62,25 @@ PROBLEMS OCCURED: --
 
 Plan for the day:
 - Make two levels ✅
-- Work on the background of the game ✅
+- Work on the background of the game ❌
 
 PROBLEMS OCCURED: --
 
+
+### Day 6 20-01-2025
+
+Plan for the day:
+- Create spritesheets for Player character
+- Implement throwing animation sprite correctly ❌
+- Paint background ❌
+- Create the enemy character(s)
+- Create assets for:
+    - wall objects
+    - door
+    - bed
+    - heart
+    - shuriken ✅
+     
 
 
 ### For the coming days
