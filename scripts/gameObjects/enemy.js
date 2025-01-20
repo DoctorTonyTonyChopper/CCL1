@@ -63,8 +63,7 @@ reactToCollision = function (collidingObject) {
     constructor(x, y, width, height){
         super(x, y, width, height);
         //this.loadImages(["./images/apple.png"]);
-        this.loadImagesFromSpritesheet("./images/BODY_skeleton.png", 9, 4, 9);
-        this.switchCurrentSprites(18, 18);
+        this.loadImages(["./images/enemy.png"]);
     }
 
 }

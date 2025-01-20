@@ -3,6 +3,8 @@ const global = {};
 function resetGlobals(){
 global.canvas = document.querySelector("#canvas");
 global.ctx = canvas.getContext("2d");
+global.ctx.imageSmoothingEnabled = false;
+
 global.deltaTime = 0;
 global.allGameObjects = [];
 global.playerObject = {};

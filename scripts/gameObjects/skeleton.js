@@ -33,7 +33,17 @@ class Skeleton extends BaseGameObject {
                 this.x += 100;
             }
             dmgEffect.play();
+            const gameContainer = document.getElementById("gameContainer"); // Replace with your actual canvas ID
+
+            // Add the red glow class
+            gameContainer.classList.add("gameContainer-glow-red");
+        
+            // Remove the class after 0.5 seconds
+            setTimeout(() => {
+                gameContainer.classList.remove("gameContainer-glow-red");
+            }, 500);
         }
+
     } 
     
 

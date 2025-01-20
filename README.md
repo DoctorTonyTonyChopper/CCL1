@@ -62,7 +62,7 @@ PROBLEMS OCCURED: --
 
 Plan for the day:
 - Make two levels ✅
-- Work on the background of the game ❌
+- Work on the background of the levels ❌
 
 PROBLEMS OCCURED: --
 
@@ -70,28 +70,42 @@ PROBLEMS OCCURED: --
 ### Day 6 20-01-2025
 
 Plan for the day:
-- Create spritesheets for Player character
+- Create spritesheets for Player character ✅ 👨🏽‍🔧
 - Implement throwing animation sprite correctly ❌
-- Paint background ❌
-- Create the enemy character(s)
+- Create background for the levels (got it from an asset pack) ✅
 - Create assets for:
-    - wall objects
-    - door
-    - bed
-    - heart
+    - Enemy ✅
+    - wall objects 👨🏽‍🔧
+    - door ✅
+    - Capsule ("Bed") ✅
+    - heart ✅
     - shuriken ✅
+- Canvas border should glow red when colliding with an enemy ✅
      
+### Day 7 21-01-2025
+
+Plan for the day:
+- Design levels!!!!!! 👨🏽‍🔧
+- Implement throwing animation sprite correctly 👨🏽‍🔧 🚨🚨 WITH LUKAS 🟡
+- Different background when reaching second Level 👨🏽‍🔧 🚨🚨 WITH LUKAS 🟡
+- How not to reset health bar? 🚨🚨 WITH LUKAS 🟡
+
+- Draw a nice Start Screen
+    - design its button 👨🏽‍🔧
+- Make a cool Story Screen 👨🏽‍🔧
+    - design its button 👨🏽‍🔧
+- Draw a nice replay/game over screen 👨🏽‍🔧
+    - design its button 👨🏽‍🔧
+
+- Make a nice border around the canvas and a background 👨🏽‍🔧
+- TRIM SOUND EFFECTS!!!!! (to be shorter) 👨🏽‍🔧
+
 
 
 ### For the coming days
-- TRIM SOUND EFFECTS!!!!! (to be shorter) 👨🏽‍🔧
-
-- Player blinks red when come in touch with enemies OR the canvas becomes red for a second? 👨🏽‍🔧 
-- Design levels!!!!!
-
 - different sprites for the enemy when it moves 👨🏽‍🔧
 
-- more levels and how we reach the new levels (erst wenn alle functionalities in einem level zb waffen) 👨🏽‍🔧
+---
 
 - Nice border around canvas 👨🏽‍🔧
 - Draw a nice home screen 👨🏽‍🔧
@@ -104,8 +118,6 @@ Plan for the day:
     - block sprites 
     - ...?
 
-
-- enemy strength? 👨🏽‍🔧
 
 
 

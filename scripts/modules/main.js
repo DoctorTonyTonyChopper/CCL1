@@ -94,7 +94,7 @@ function setupGame() {
     backgroundMusic.play();
 
     resetGlobals();
-    global.playerObject = new Skeleton(0, 400, 64, 64);
+    global.playerObject = new Skeleton(0, 400, 80, 80);
     global.leftMoveTrigger = new MoveTrigger(0, 100, 20, 900, 100);
     global.rightMoveTrigger = new MoveTrigger(800, 100, 20, 900, -100);
 
@@ -105,8 +105,8 @@ function setupGame() {
     new BlockObject(400, 200, 50, 50);
 
     new Heart(400, 200, 50, 50);
-    new Enemy(500, 400, 50, 50);
-    new Door(1775, 300, 85, 100);
+    new Enemy(500, 400, 75, 80);
+    new Door(1775, 300, 100, 110);
 
 
     console.log(global.playerObject)
@@ -131,10 +131,23 @@ function setupGame1() {
     backgroundMusic.play();
 
     resetGlobals();
-    global.playerObject = new Skeleton(0, 400, 64, 64);
+    global.playerObject = new Skeleton(0, 400, 80, 80);
     global.leftMoveTrigger = new MoveTrigger(0, 100, 20, 900, 100);
     global.rightMoveTrigger = new MoveTrigger(800, 100, 20, 900, -100);
 
+    /*
+    const bg2 = document.getElementById("background");
+
+    // Changing background for Level 2
+    bg2.style.background = "url('../images/background2.png')"; 
+    bg2.style.position = "absolute";
+    bg2.style.left = "0";
+    bg2.style.top = "0";
+    bg2.style.width = "1000px";
+    bg2.style.height = "500px";
+    bg2.style.backgroundSize = "cover";
+    bg2.style.zIndex = "0"; 
+    */
 
     new Floor(0, 400, 9000, 50);
     new BlockObject(200, 280, 50, 50);
