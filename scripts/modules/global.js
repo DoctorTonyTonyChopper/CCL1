@@ -3,7 +3,7 @@ const global = {};
 function resetGlobals(){
 global.canvas = document.querySelector("#canvas");
 global.ctx = canvas.getContext("2d");
-global.ctx.imageSmoothingEnabled = false;
+global.ctx.imageSmoothingEnabled = true;
 
 global.deltaTime = 0;
 global.allGameObjects = [];
@@ -16,8 +16,10 @@ global.leftMoveTrigger;
 global.rightMoveTrigger;
 global.gameRunning = true;
 global.prevTotalRunningTime = 0;
+
 }
 
+global.currentHealth = 3;
 
 global.getCanvasBounds = function () {
     let bounds =  {

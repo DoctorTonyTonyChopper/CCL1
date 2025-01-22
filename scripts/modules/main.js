@@ -2,17 +2,29 @@ import { global, resetGlobals } from "./global.js";
 import { Skeleton } from "../gameObjects/skeleton.js";
 import { MoveTrigger } from "../gameObjects/moveTrigger.js";
 import { BlockObject } from "../gameObjects/blockObject.js";
+import { BlockObject2 } from "../gameObjects/blockObject2.js";
 import { Floor } from "../gameObjects/floor.js";
 import { Heart } from "../gameObjects/heart.js";
 import { Enemy } from "../gameObjects/enemy.js";
 import { Shuriken } from "../gameObjects/shuriken.js";
 import { Door } from "../gameObjects/door.js";
 import { Bed } from "../gameObjects/bed.js";
+import { Spikes } from "../gameObjects/spikes.js";
+
 import {backgroundMusic, dmgEffect, healthEffect } from "./sound.js";
 
 
 let gameOverButton = document.getElementById("gameOverButton");
 gameOverButton.addEventListener("click", setupGame);
+
+let gameFinishedButton = document.getElementById("gameFinishedButton");
+gameFinishedButton.addEventListener("click", () => { 
+    // Hide the game start screen
+    let gameFinishedScreen = document.getElementById("gameFinishedScreen");
+    gameFinishedScreen.style.display = "none";
+    // Start the game setup
+    displayGameStartScreen();
+});
 
 // Start Game Button
 let gameStartButton = document.getElementById("gameStartButton");
@@ -27,15 +39,18 @@ gameStartButton.addEventListener("click", () => {
 let startButton = document.getElementById("startButton");
     startButton.addEventListener("click", () => {
     // Hide the game start screen
+    document.getElementById("background").style.backgroundImage = "url(./images/background.jpg)";
     let storyScreen = document.getElementById("storyScreen");
     storyScreen.style.display = "none";
     // Start the game setup
     setupGame();
+    
 });
 
 function displayGameOverScreen () {
     let gameOverScreen = document.getElementById("gameOverScreen");
     gameOverScreen.style.display = "block";
+    global.currentHealth = 3;
 
 }
 
@@ -51,13 +66,17 @@ function displayStoryScreen (){
 
 }
 
+function displayGameFinishedScreen () {
+    let gameFinishedScreen = document.getElementById("gameFinishedScreen");
+    gameFinishedScreen.style.display = "block";
+}
 
 function gameLoop(totalRunningTime) {
     if (global.prevTotalRunningTime == 0) {
         global.prevTotalRunningTime = totalRunningTime;
     }
 
-    if(global.playerObject.currentHealth <= 0){
+    if(global.currentHealth <= 0){
         displayGameOverScreen();
         global.gameRunning = false;
     }
@@ -91,21 +110,57 @@ function setupGame() {
     let storyScreen = document.getElementById("storyScreen");
     storyScreen.style.display = "none";
 
+    let gameFinishedScreen = document.getElementById("gameFinishedScreen");
+    gameFinishedScreen.style.display = "none";
+
+    backgroundMusic.loop = true;
     backgroundMusic.play();
 
     resetGlobals();
     global.playerObject = new Skeleton(0, 400, 80, 80);
-    global.leftMoveTrigger = new MoveTrigger(0, 100, 20, 900, 100);
-    global.rightMoveTrigger = new MoveTrigger(800, 100, 20, 900, -100);
+    global.leftMoveTrigger = new MoveTrigger(0, 0, 20, 900);
+    global.rightMoveTrigger = new MoveTrigger(800, 0, 20, 900);
 
 
     new Floor(0, 400, 9000, 50);
+    new Spikes(350, 400, 50, 50);
     new BlockObject(200, 280, 50, 50);
     new BlockObject(400, 200, 50, 50);
-    new BlockObject(400, 200, 50, 50);
+    new BlockObject(500, 200, 50, 50);
+    new BlockObject(450, 200, 50, 50);
+
+        new Enemy(400, 400, 75, 80);
+
+    new BlockObject(550, 200, 50, 50);
+    new BlockObject(600, 200, 50, 50);
+    new BlockObject(650, 200, 50, 50);
+    new BlockObject(650, 200, 50, 50);
+    new BlockObject(700, 250, 50, 50);
+    new BlockObject(700, 300, 50, 50);
+    new BlockObject(700, 350, 50, 50);
+
+
+    new BlockObject(950, 200, 50, 50);
+    new BlockObject(1000, 200, 50, 50);
+    new BlockObject(1050, 200, 50, 50);
+    new BlockObject(1100, 200, 50, 50);
+    new Heart(1000, 250, 50, 50);
+
+
+    new Enemy(1000, 175, 75, 80);
+
+    new BlockObject(1300, 250, 50, 50);
+    new BlockObject(1300, 350, 50, 50);
+    new BlockObject(1300, 300, 50, 50);
+
+
+
+
 
     new Heart(400, 200, 50, 50);
-    new Enemy(500, 400, 75, 80);
+
+    new Enemy(1500, 300, 75, 80);
+
     new Door(1775, 300, 100, 110);
 
 
@@ -124,16 +179,19 @@ function setupGame() {
 }
 
 function setupGame1() {
+    document.getElementById("background").style.backgroundImage = "url(./images/background2.png)";
     let gameOverScreen = document.getElementById("gameOverScreen");
     gameOverScreen.style.display = "none";
+    let gameFinishedScreen = document.getElementById("gameFinishedScreen");
+    gameFinishedScreen.style.display = "none";
 
-
+    backgroundMusic.loop = true;
     backgroundMusic.play();
 
     resetGlobals();
     global.playerObject = new Skeleton(0, 400, 80, 80);
-    global.leftMoveTrigger = new MoveTrigger(0, 100, 20, 900, 100);
-    global.rightMoveTrigger = new MoveTrigger(800, 100, 20, 900, -100);
+    global.leftMoveTrigger = new MoveTrigger(0, 0, 20, 900);
+    global.rightMoveTrigger = new MoveTrigger(800, 0, 20, 900);
 
     /*
     const bg2 = document.getElementById("background");
@@ -150,12 +208,44 @@ function setupGame1() {
     */
 
     new Floor(0, 400, 9000, 50);
-    new BlockObject(200, 280, 50, 50);
-    new BlockObject(400, 200, 50, 50);
-    new BlockObject(400, 200, 50, 50);
+    new BlockObject2(200, 280, 50, 50);
+    new BlockObject2(400, 200, 50, 50);
+    new BlockObject2(400, 200, 50, 50);
 
     new Heart(400, 200, 50, 50);
-    new Enemy(500, 400, 50, 50);
+    new BlockObject2(500, 200, 50, 50);
+    new BlockObject2(600, 200, 50, 50);
+
+    new BlockObject2(800, 250, 50, 50);
+    new BlockObject2(800, 200, 50, 50);
+    new BlockObject2(800, 300, 50, 50);
+    new BlockObject2(800, 350, 50, 50);
+    new BlockObject2(850, 200, 50, 50);
+
+    new BlockObject2(90, 30, 50, 50);
+
+
+    new BlockObject2(1200, 250, 50, 50);
+    new BlockObject2(1200, 200, 50, 50);
+    new BlockObject2(1200, 300, 50, 50);
+    new BlockObject2(1200, 350, 50, 50);
+    
+    new Heart(1150, 150, 50, 50);
+    new BlockObject2(1150, 200, 50, 50);
+
+
+
+    new Enemy(400, 400, 75, 80);
+
+    new Enemy(900, 400, 75, 80);
+
+    new Enemy(1350, 400, 75, 80);
+
+    new Enemy(1550, 400, 75, 80);
+    
+    new Enemy(1600, 400, 75, 80);
+
+
     new Bed(1750, 275, 75, 150);
 
     console.log(global.playerObject)
@@ -175,7 +265,7 @@ function setupGame1() {
 
 
 
-export {setupGame, displayGameOverScreen, displayGameStartScreen, displayStoryScreen, setupGame1};
+export {setupGame, displayGameOverScreen, displayGameStartScreen, displayStoryScreen, setupGame1, displayGameFinishedScreen};
 
 
 

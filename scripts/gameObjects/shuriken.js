@@ -9,7 +9,7 @@ class Shuriken extends BaseGameObject {
     xVelocity = 0;
     movementSpeed = 400;
     yVelocity = 0;
-    useGravityForces = true;
+    useGravityForces = false;
     hasCollided = false;
 
     reactToCollision = function (collidingObject) {   

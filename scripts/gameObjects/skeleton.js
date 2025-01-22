@@ -2,6 +2,7 @@ import { BaseGameObject } from "./baseGameObject.js";
 import { global } from "../modules/global.js";
 import { setupGame, displayGameOverScreen } from "../modules/main.js";
 import { Shuriken } from "./shuriken.js";
+import { Spikes } from "./spikes.js";
 import {dmgEffect, healthEffect } from "../modules/sound.js";
 
 
@@ -10,7 +11,6 @@ class Skeleton extends BaseGameObject {
     xVelocity = 0;
     yVelocity = 0;
     useGravityForces = true;
-    currentHealth = 3;
     maxHealth = 6;
     hasCollided = false;
     canTakeDamage = true;
@@ -20,12 +20,12 @@ class Skeleton extends BaseGameObject {
     reactToCollision = function (collidingObject) {
         if (collidingObject.name == "Heart") {
             this.changeCurrentHealth(1);
-            console.log(this.currentHealth);
+            console.log(global.currentHealth);
             healthEffect.play();
         }
-        if(collidingObject.name == "Enemy") {
+        if(collidingObject.name == "Enemy" || collidingObject.name == "Spikes" ) {
             this.changeCurrentHealth(-1);
-            console.log(this.currentHealth);
+            console.log(global.currentHealth);
 
             if (this.x < collidingObject.x) { // collision from the left
                 this.x -= 100;
@@ -44,8 +44,7 @@ class Skeleton extends BaseGameObject {
             }, 500);
         }
 
-    } 
-    
+} 
 
     getBoxBounds = function () {
         let bounds = {
@@ -81,7 +80,7 @@ class Skeleton extends BaseGameObject {
     updateHealthDisplay = function () {
         let healthContainer = document.getElementById("health-bar");
         healthContainer.innerHTML = "";
-        for (let i = 0; i < this.currentHealth; i++) {
+        for (let i = 0; i < global.currentHealth; i++) {
             let heart = document.createElement("img");
             heart.src = "./images/heart.png";
             heart.classList.add("heart");
@@ -95,7 +94,7 @@ class Skeleton extends BaseGameObject {
     changeCurrentHealth = function (dmg) {
         if (dmg < 0) {
             if (this.canTakeDamage == true) {
-                this.currentHealth += dmg;
+                global.currentHealth += dmg;
                 this.canTakeDamage = false;
                 window.setTimeout(() => { this.canTakeDamage = true; }, this.timeoutDamage);
 
@@ -103,8 +102,8 @@ class Skeleton extends BaseGameObject {
             }
         }
         else {
-            if (this.currentHealth < this.maxHealth) {
-                this.currentHealth += dmg;
+            if (global.currentHealth < this.maxHealth) {
+                global.currentHealth += dmg;
 
 
 
@@ -118,7 +117,7 @@ class Skeleton extends BaseGameObject {
     }
 
     throwing = function() {
-            new Shuriken(global.playerObject.faceRight == true ? global.playerObject.x - 15 + global.playerObject.width : global.playerObject.x, global.playerObject.y, 40, 40, global.playerObject.faceRight);
+            new Shuriken(global.playerObject.faceRight == true ? global.playerObject.x - 35 + global.playerObject.width : global.playerObject.x, global.playerObject.y + 30, 40, 40, global.playerObject.faceRight);
     }
     
 }

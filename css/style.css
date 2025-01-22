@@ -1,3 +1,11 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url('../images/pageBackground.jpg') no-repeat center center fixed; /* Replace with your background image */
+  background-size: cover;
+  overflow: hidden; /* Prevent unwanted scrolling if the image is large */
+}
+
 #container {
     display: flex;
     justify-content: center;
@@ -11,18 +19,42 @@
     position: relative;
     width: 1000px; /* change according to your game */
     height: 500px; /* change according to your game */
+   /* border: 2px solid #2e1701; Optional: Add a border to see the effect */
+    border-radius: 10px; /* Adjust the value for more or less rounded corners */
 }
+
 
 .gameContainer-glow-red {
   box-shadow: 0 0 20px red;
   border: 2px solid red;
+  animation: movingGlow 3s infinite;
 }
+
+@keyframes movingGlow {
+  0% {
+    box-shadow: -10px -10px 30px red, 10px 10px 30px rgb(132, 6, 2);
+  }
+  50% {
+    box-shadow: 10px -10px 30px rgb(173, 13, 24), -10px 10px 30px rgb(255, 89, 0);
+  }
+  100% {
+    box-shadow: -10px -10px 30px red, 10px 10px 30px rgb(118, 23, 14);
+  }
+}
+
+
+
+
+
+
+
 
 #canvas {
     position: absolute;
     left: 0;
     top: 0;
     z-index: 10;
+
 }
 
 
@@ -34,7 +66,6 @@
     top: 0;
     width: 1000px; 
     height: 500px;
-    background-image: url("../images/background.jpg");
     background-size: cover;
     z-index: 0;
 
@@ -57,7 +88,7 @@
     position: relative;
     display: none;
     z-index: 30;
-    background-image: url('/images/backgroundCCL.png');
+    background-image: url('/images/gameoverscreen.png');
 
     background-size: cover;        /* Ensures the image covers the whole container */
     background-position: center;   /* Centers the image */
@@ -73,15 +104,15 @@
     left: 50%;          /* Move to 50% from left */
     transform: translate(-50%, -50%); /* Offset by half its own width/height */
     padding: 10px 20px;
-    background-color: rgb(110, 25, 25);
-    color: white;
+    background-color: white;
+    color: red;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
   }
 
   #gameOverButton:hover{
-    background-color: black;
+    background-color: red;
     color: white;
   }
 
@@ -89,7 +120,7 @@
     display: none;
     position: relative;
     z-index: 30;
-    background-image: url('/images/backgroundCCL.png');
+    background-image: url('/images/storyScreen.png');
 
     background-size: cover;        /* Ensures the image covers the whole container */
     background-position: center;   /* Centers the image */
@@ -99,7 +130,37 @@
     height: 500px; /* change according to your game */
   }
 
+  #gameFinishedScreen {
+    position: relative;
+    display: none;
+    z-index: 30;
+    background-image: url('/images/gamefinishedscreen.PNG');
 
+    background-size: cover;        /* Ensures the image covers the whole container */
+    background-position: center;   /* Centers the image */
+    background-repeat: no-repeat;  /* Prevents tiling the image */
+
+    width: 1000px; /* change according to your game */
+    height: 500px; /* change according to your game */
+  }
+
+  #gameFinishedButton{
+    position: absolute;
+    top: 50%;           /* Move to 50% from top */
+    left: 45%;          /* Move to 50% from left */
+    transform: translate(-50%, -50%); /* Offset by half its own width/height */
+    padding: 10px 20px;
+    background-color: rgb(110, 25, 25);
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  #gameFinishedButton:hover{
+    background-color: black;
+    color: white;
+  }
 
 /*
   #gameFinishedScreen {
@@ -152,19 +213,44 @@
 #gameStartButton{
   display: inline-block; /* or block */
   position: absolute;
-  top: 50%;           /* Move to 50% from top */
-  left: 50%;          /* Move to 50% from left */
+  top: 65%;           /* Move to 50% from top */
+  left: 75%;          /* Move to 50% from left */
   transform: translate(-50%, -50%); /* Offset by half its own width/height */
-  padding: 10px 20px;
+  padding: 20px 50px;
   background-color: rgb(110, 25, 25);
   color: white;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 28px;
   cursor: pointer;
   z-index: 41;
 
 }
 
+#gameStartButton:hover{
+  background-color: white;
+  color: green;
+}
+
+#startButton{
+  display: inline-block; /* or block */
+  position: absolute;
+  top: 86%;           /* Move to 50% from top */
+  left: 50%;          /* Move to 50% from left */
+  transform: translate(-50%, -50%); /* Offset by half its own width/height */
+  padding: 10px 25px;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 41;
+
+}
+
+#startButton:hover{
+  background-color: black;
+  color: white;
+}
 
   .heart {
     width: 30px;

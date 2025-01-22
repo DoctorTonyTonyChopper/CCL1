@@ -45,14 +45,14 @@ I WANT THE SHURIKEN TO DISAPPEAR ONCE IT HITS THE ENEMY AND IF IT DOES NOT HIT A
 Plan for the day: 
 - Restart Game/Game Over screen ✅
 - Home screen (with start button) ✅
-- Level design 👨🏽‍🔧
+- Level design ❌
     - maybe more level? 👨🏽‍🔧
 - Add sound effects 
     - when colliding with hearts ✅
     - background music ✅
     - when player touches enemy (damage effect) ✅
     - when enemy dies ✅
-    - when thworing shuriken 👨🏽‍🔧
+    - when thworing shuriken ✅
 - Text after starting the game for the first time where story is explained (as a picture probably)
 
 
@@ -75,49 +75,109 @@ Plan for the day:
 - Create background for the levels (got it from an asset pack) ✅
 - Create assets for:
     - Enemy ✅
-    - wall objects 👨🏽‍🔧
+    - wall objects ❌
     - door ✅
     - Capsule ("Bed") ✅
     - heart ✅
     - shuriken ✅
 - Canvas border should glow red when colliding with an enemy ✅
+
+PROBLEMS OCCURED: --
      
 ### Day 7 21-01-2025
 
 Plan for the day:
-- Design levels!!!!!! 👨🏽‍🔧
-- Implement throwing animation sprite correctly 👨🏽‍🔧 🚨🚨 WITH LUKAS 🟡
-- Different background when reaching second Level 👨🏽‍🔧 🚨🚨 WITH LUKAS 🟡
-- How not to reset health bar? 🚨🚨 WITH LUKAS 🟡
+- Implement throwing animation sprite correctly 👨🏽‍🔧 🚨🚨 WITH LUKAS ❌
+- Implement jumping animaton sprite correctly 👨🏽‍🔧 🚨🚨 WITH LUKAS ❌
+- Different background when reaching second Level 👨🏽‍🔧 🚨🚨 WITH LUKAS ✅
+- How not to reset health bar? 🚨🚨 WITH LUKAS ✅
 
-- Draw a nice Start Screen
-    - design its button 👨🏽‍🔧
-- Make a cool Story Screen 👨🏽‍🔧
-    - design its button 👨🏽‍🔧
-- Draw a nice replay/game over screen 👨🏽‍🔧
-    - design its button 👨🏽‍🔧
+- Draw a nice Start Screen ✅
+    - design its button ✅
+- Make a cool Story Screen ✅
+    - design its button ✅
+- Draw a nice Game over screen ❌
+    - design its button ❌
+- Make a round border around the canvas ✅
+- different sprites for the enemy when it moves ✅
+- Create wall object asset (Block sprite) ✅
 
-- Make a nice border around the canvas and a background 👨🏽‍🔧
+
+- AI background music of the game (made using mubert.com) ✅
+- Explain controls (w, a, d and spacebar) on start screen ✅
+- TRIM SOUND EFFECTS!!!!! (to be shorter) ❌
+
+
+
+PROBLEMS OCCURED: --
+
+
+### Day 8 22-01-2025
+- Design levels! ✅
+
+- Add a proper background (image) for the website ❌
+- Make new spritesheet! ✅
+- Adjust level 2 background (white stripe below in the middle) ✅
+- Draw Game Over Screen ✅
+- Draw Game Finished Screen  ✅
+- Modify Game Start Screen ✅
+
 - TRIM SOUND EFFECTS!!!!! (to be shorter) 👨🏽‍🔧
 
 
 
-### For the coming days
-- different sprites for the enemy when it moves 👨🏽‍🔧
+PROBLEMS OCCURED: PLAYER JUMPS OVER THE MOVE TRIGGER???? NEED FIX ASAP --> FIXED ✅
+
+
+
+### Day 9 23-01-2025 
+
+🚨🚨 WENN ICH HERZEN EINSAMMLE, GAME CLEARE UND DANN RESTARTE, HABE ICH ALLE EINGESAMMELTEN HERZEN
+- Mit Magdalena sprites durchgehen 🚨🚨
+- Trim sound effects 👨🏽‍🔧
+- Maybe new mechanic? 👨🏽‍🔧
+- Add a proper background (image) for the website 👨🏽‍🔧
+- Finalize levels 👨🏽‍🔧
+- Make presentation 👨🏽‍🔧
+
+
+
+### Day 10 24-01-2025
+- Present the game
+- Have fun, lol
+
+
+### 01-02-2025
+- Adjust the names in the code 🚨🚨
+
+
 
 ---
+MAYBE: 
+- Implement throwing animation sprite correctly 👨🏽‍🔧 🚨🚨 WITH LUKAS ❌
+- Implement jumping animaton sprite correctly 👨🏽‍🔧 🚨🚨 WITH LUKAS ❌
+- Maybe recreate sound effects myself?
 
-- Nice border around canvas 👨🏽‍🔧
-- Draw a nice home screen 👨🏽‍🔧
-- Draw a cool story screen 👨🏽‍🔧
-- Draw a nice replay/game over screen 👨🏽‍🔧
-- Make assets 👨🏽‍🔧
-    - player sprites
-    - enemy sprites
-    - paint background + floor
-    - block sprites 
-    - ...?
+------
 
+
+
+
+### Everything I did on my own that I should tell in the presentation
+- Player sprites + movement 🤗
+- Enemy sprites 🤗
+- Wall block 🤗
+- Spikes 🤗 
+- Heart 🤗
+- Home Screen artwork 🤗
+- Story screen 🤗
+- Game Over Screen artwork 🤗
+- Game Finished Screen artwork 🤗
+- Background Music (AI generated) 🤗
+
+What I didn't do myself:
+- Page background 
+- Level backgrounds (I put the tiles together, though)
 
 
 
