@@ -10,7 +10,6 @@ import { Shuriken } from "../gameObjects/shuriken.js";
 import { Door } from "../gameObjects/door.js";
 import { Bed } from "../gameObjects/bed.js";
 import { Spikes } from "../gameObjects/spikes.js";
-
 import {backgroundMusic, dmgEffect, healthEffect } from "./sound.js";
 
 
@@ -69,6 +68,7 @@ function displayStoryScreen (){
 function displayGameFinishedScreen () {
     let gameFinishedScreen = document.getElementById("gameFinishedScreen");
     gameFinishedScreen.style.display = "block";
+
 }
 
 function gameLoop(totalRunningTime) {
@@ -120,9 +120,8 @@ function setupGame() {
     global.playerObject = new Skeleton(0, 400, 80, 80);
     global.leftMoveTrigger = new MoveTrigger(0, 0, 20, 900);
     global.rightMoveTrigger = new MoveTrigger(800, 0, 20, 900);
-
-
     new Floor(0, 400, 9000, 50);
+
     new Spikes(350, 400, 50, 50);
     new BlockObject(200, 280, 50, 50);
     new BlockObject(400, 200, 50, 50);

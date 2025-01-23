@@ -122,7 +122,9 @@ PROBLEMS OCCURED: --
 - Draw Game Finished Screen  ✅
 - Modify Game Start Screen ✅
 
-- TRIM SOUND EFFECTS!!!!! (to be shorter) 👨🏽‍🔧
+- Add spikes that can damage the player ✅
+
+- TRIM SOUND EFFECTS!!!!! (to be shorter) ✅
 
 
 
@@ -133,8 +135,8 @@ PROBLEMS OCCURED: PLAYER JUMPS OVER THE MOVE TRIGGER???? NEED FIX ASAP --> FIXED
 ### Day 9 23-01-2025 
 
 🚨🚨 WENN ICH HERZEN EINSAMMLE, GAME CLEARE UND DANN RESTARTE, HABE ICH ALLE EINGESAMMELTEN HERZEN
-- Mit Magdalena sprites durchgehen 🚨🚨
-- Trim sound effects 👨🏽‍🔧
+🚨🚨 MUSIK STOPPEN LASSEN BEI GAME OVER/GAME FINISHED SCENE
+- Mit Magdalena spritesheet durchgehen 🚨🚨
 - Maybe new mechanic? 👨🏽‍🔧
 - Add a proper background (image) for the website 👨🏽‍🔧
 - Finalize levels 👨🏽‍🔧
