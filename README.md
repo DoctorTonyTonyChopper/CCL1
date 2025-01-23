@@ -136,6 +136,7 @@ PROBLEMS OCCURED: PLAYER JUMPS OVER THE MOVE TRIGGER???? NEED FIX ASAP --> FIXED
 
 🚨🚨 WENN ICH HERZEN EINSAMMLE, GAME CLEARE UND DANN RESTARTE, HABE ICH ALLE EINGESAMMELTEN HERZEN
 🚨🚨 MUSIK STOPPEN LASSEN BEI GAME OVER/GAME FINISHED SCENE
+🚨🚨 KILL ALL ENEMIES TO PROGESS TO NEXT LEVEL?
 - Mit Magdalena spritesheet durchgehen 🚨🚨
 - Maybe new mechanic? 👨🏽‍🔧
 - Add a proper background (image) for the website 👨🏽‍🔧
