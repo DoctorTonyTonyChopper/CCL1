@@ -134,15 +134,21 @@ PROBLEMS OCCURED: PLAYER JUMPS OVER THE MOVE TRIGGER???? NEED FIX ASAP --> FIXED
 
 ### Day 9 23-01-2025 
 
-🚨🚨 WENN ICH HERZEN EINSAMMLE, GAME CLEARE UND DANN RESTARTE, HABE ICH ALLE EINGESAMMELTEN HERZEN
-🚨🚨 MUSIK STOPPEN LASSEN BEI GAME OVER/GAME FINISHED SCENE
-🚨🚨 KILL ALL ENEMIES TO PROGESS TO NEXT LEVEL?
-- Mit Magdalena spritesheet durchgehen 🚨🚨
-- Maybe new mechanic? 👨🏽‍🔧
+- MAKE THE SPIKES FALL FROM THE SKY ✅
+- Make music stop playing at Game Over and Game Finished screen ✅
+- MAKE SHURIKENS COLLECTIBLE, LIMITED SHURIKEN (AMMO)!!!!! ✅
+
+- Talk with Magdalena about the spritesheet  ✅ --> draw over lineart and try again ✅
+- Maybe new mechanic/enemy type? ✅
+
 - Add a proper background (image) for the website 👨🏽‍🔧
-- Finalize levels 👨🏽‍🔧
+- Change heart animation speed (It's too fast) 👨🏽‍🔧
+- Draw Drone spritesheet 👨🏽‍🔧
+- Modify Shuriken sprite for shuriken bar and collectible 👨🏽‍🔧
+- Finalize levels ✅
 - Make presentation 👨🏽‍🔧
 
+PROBLEMS OCCURED: WHEN I COLLECT HEARTS, FINISH THE GAME AND THEN PRESS RESTART GAME BUTTON AT GAME FINISHED SCREEN TO PLAY THE GAME AGAIN, I HAVE ALL MY COLLECTED HEARTS, THEY DO NOT GET RESET. --> FIXED ✅
 
 
 ### Day 10 24-01-2025
@@ -159,7 +165,6 @@ PROBLEMS OCCURED: PLAYER JUMPS OVER THE MOVE TRIGGER???? NEED FIX ASAP --> FIXED
 MAYBE: 
 - Implement throwing animation sprite correctly 👨🏽‍🔧 🚨🚨 WITH LUKAS ❌
 - Implement jumping animaton sprite correctly 👨🏽‍🔧 🚨🚨 WITH LUKAS ❌
-- Maybe recreate sound effects myself?
 
 ------
 
@@ -168,7 +173,8 @@ MAYBE:
 
 ### Everything I did on my own that I should tell in the presentation
 - Player sprites + movement 🤗
-- Enemy sprites 🤗
+- Enemy sprite 🤗
+- Drone sprite 🤗
 - Wall block 🤗
 - Spikes 🤗 
 - Heart 🤗
@@ -176,10 +182,10 @@ MAYBE:
 - Story screen 🤗
 - Game Over Screen artwork 🤗
 - Game Finished Screen artwork 🤗
-- Background Music (AI generated) 🤗
+- Background Music (AI generated, mubert.com) 🤗
+- Page background (AI generated) 🤗
 
 What I didn't do myself:
-- Page background 
 - Level backgrounds (I put the tiles together, though)
 
 

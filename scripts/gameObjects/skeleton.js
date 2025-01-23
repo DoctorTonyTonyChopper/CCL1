@@ -1,6 +1,6 @@
 import { BaseGameObject } from "./baseGameObject.js";
 import { global } from "../modules/global.js";
-import { setupGame, displayGameOverScreen } from "../modules/main.js";
+import { setupGame1, displayGameOverScreen } from "../modules/main.js";
 import { Shuriken } from "./shuriken.js";
 import { Spikes } from "./spikes.js";
 import {dmgEffect, healthEffect } from "../modules/sound.js";
@@ -16,6 +16,7 @@ class Skeleton extends BaseGameObject {
     canTakeDamage = true;
     timeoutDamage = 0;
     faceRight = false;
+    shurikenCount = 3;
 
     reactToCollision = function (collidingObject) {
         if (collidingObject.name == "Heart") {
@@ -23,14 +24,20 @@ class Skeleton extends BaseGameObject {
             console.log(global.currentHealth);
             healthEffect.play();
         }
-        if(collidingObject.name == "Enemy" || collidingObject.name == "Spikes" ) {
+        if(collidingObject.name == "ShurikenCollect"){
+            this.shurikenCount++
+            this.updateShurikenDisplay();
+        }
+        
+        if(collidingObject.name == "Enemy" || collidingObject.name == "Spikes" || collidingObject.name == "Drone" ) {
             this.changeCurrentHealth(-1);
             console.log(global.currentHealth);
+            console.log(collidingObject.x, this.x);
 
             if (this.x < collidingObject.x) { // collision from the left
-                this.x -= 100;
+                this.x = collidingObject.x - 100;
             } else if (this.x > collidingObject.x) { // collision from the right
-                this.x += 100;
+                this.x = collidingObject.x + 100;
             }
             dmgEffect.play();
             const gameContainer = document.getElementById("gameContainer"); // Replace with your actual canvas ID
@@ -75,6 +82,7 @@ class Skeleton extends BaseGameObject {
         this.loadImagesFromSpritesheet("./images/BODY_player.png", 9, 4, 9);
         this.switchCurrentSprites(18, 18);
         this.updateHealthDisplay();
+        this.updateShurikenDisplay();
     }
 
     updateHealthDisplay = function () {
@@ -82,7 +90,7 @@ class Skeleton extends BaseGameObject {
         healthContainer.innerHTML = "";
         for (let i = 0; i < global.currentHealth; i++) {
             let heart = document.createElement("img");
-            heart.src = "./images/heart.png";
+            heart.src = "./images/heart1.png";
             heart.classList.add("heart");
             healthContainer.appendChild(heart);
         }
@@ -116,8 +124,24 @@ class Skeleton extends BaseGameObject {
         
     }
 
+    
+    updateShurikenDisplay = function () {
+        let shurikenContainer = document.getElementById("shuriken-bar");
+        shurikenContainer.innerHTML = "";
+        for (let i = 0; i < this.shurikenCount; i++) {
+            let shuriken = document.createElement("img");
+            shuriken.src = "./images/shuriken.png";
+            shuriken.classList.add("shuriken");
+            shurikenContainer.appendChild(shuriken);
+        }
+    }
+
     throwing = function() {
-            new Shuriken(global.playerObject.faceRight == true ? global.playerObject.x - 35 + global.playerObject.width : global.playerObject.x, global.playerObject.y + 30, 40, 40, global.playerObject.faceRight);
+            if (this.shurikenCount > 0) {
+                new Shuriken(global.playerObject.faceRight == true ? global.playerObject.x - 35 + global.playerObject.width : global.playerObject.x, global.playerObject.y + 30, 40, 40, global.playerObject.faceRight);
+                this.shurikenCount--;
+                this.updateShurikenDisplay();
+            }
     }
     
 }

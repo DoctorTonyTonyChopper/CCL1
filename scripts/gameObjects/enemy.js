@@ -43,7 +43,6 @@ reactToCollision = function (collidingObject) {
         return bounds;
     }
 
-// 🟡🟡 /* Have to implement different SPRITES when enemy MOVES!!! 🟡🟡
     update = function() { 
         // Move left or right based on direction
         if (this.movingRight) {

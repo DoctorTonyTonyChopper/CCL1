@@ -1,8 +1,8 @@
 import { BaseGameObject } from "./baseGameObject.js";
 import { global } from "../modules/global.js";
 
-class Heart extends BaseGameObject {
-    name = "Heart";
+class ShurikenCollect extends BaseGameObject {
+    name = "ShurikenCollect";
     xVelocity = 0;
     yVelocity = 0;
     useGravityForces = true;
@@ -24,13 +24,7 @@ class Heart extends BaseGameObject {
         return bounds;
     }
 
-    update = function() {
-        this.x += this.xVelocity * global.deltaTime;
-        this.y += this.yVelocity * global.deltaTime;
-        if (this.xVelocity == 0) {
-            this.switchCurrentSprites(this.animationData.firstSpriteIndex);
-        }
-    }
+
 
    /* draw = function () {
         global.ctx.fillStyle = "#000000";
@@ -39,8 +33,9 @@ class Heart extends BaseGameObject {
 
     constructor(x, y, width, height) {
         super(x, y, width, height);
-        this.loadImagesFromSpritesheet("./images/heart.png", 5, 1, 5);
-        this.switchCurrentSprites(0, 4);    }
+        this.loadImagesFromSpritesheet("./images/shuriken.png", 1, 1, 1);
+        
+  }
 }
 
-export {Heart}
+export {ShurikenCollect}

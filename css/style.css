@@ -84,6 +84,16 @@ body {
 
   }
 
+  #shuriken-bar {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    z-index: 20;
+
+  }
+
   #gameOverScreen {
     position: relative;
     display: none;
@@ -258,6 +268,14 @@ body {
     /* background: url('heart.png') no-repeat center/cover; */
     z-index: 20;
   }
+
+  .shuriken {
+    width: 30px;
+    height: 30px;
+    /* background: url('heart.png') no-repeat center/cover; */
+    z-index: 20;
+  }
+
   
   .hidden {
     display: none; /* Hide hearts when losing health */
