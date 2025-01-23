@@ -51,7 +51,7 @@ class Drone extends BaseGameObject {
 
     constructor(x, y, width, height) {
         super(x, y, width, height);
-        this.loadImagesFromSpritesheet("./images/enemy.png", 4, 1, 4);
+        this.loadImagesFromSpritesheet("./images/drone.png", 4, 1, 4);
         this.switchCurrentSprites(0, 3);
     }
 }

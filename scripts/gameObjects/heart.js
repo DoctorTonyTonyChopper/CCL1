@@ -39,8 +39,8 @@ class Heart extends BaseGameObject {
 
     constructor(x, y, width, height) {
         super(x, y, width, height);
-        this.loadImagesFromSpritesheet("./images/heart.png", 5, 1, 5);
-        this.switchCurrentSprites(0, 4);    }
+        this.loadImagesFromSpritesheet("./images/heart.png", 16, 1, 16);
+        this.switchCurrentSprites(0, 15);    }
 }
 
 export {Heart}

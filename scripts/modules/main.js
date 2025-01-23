@@ -140,7 +140,7 @@ function setupGame() {
     new BlockObject(500, 200, 50, 50);
     new BlockObject(550, 200, 50, 50);
 
-    new Drone (600, 25, 50, 50);
+    new Drone (600, 25, 75, 80);
 
     new BlockObject(600, 200, 50, 50);
     new BlockObject(650, 200, 50, 50);
@@ -166,9 +166,9 @@ function setupGame() {
     new BlockObject(1300, 350, 50, 50);
     new BlockObject(1300, 300, 50, 50);
 
-    new Drone (1400, 150, 50, 50);
+    new Drone (1400, 120, 75, 80);
     new Spikes(1550, 0, 50, 50, 18000);   
-    new Drone (1700, 250, 50, 50);
+    new Drone (1700, 220, 75, 80);
     new Door(1775, 300, 100, 110);
 
     console.log(global.playerObject)
@@ -229,7 +229,7 @@ function setupGame1() {
     new ShurikenCollect (600, 150, 50, 50);
     new BlockObject2(600, 200, 50, 50);
 
-    new Drone(750, 100, 50, 50);
+    new Drone(750, 100, 75, 80);
 
     new BlockObject2(800, 250, 50, 50);
     new BlockObject2(800, 200, 50, 50);
@@ -239,8 +239,8 @@ function setupGame1() {
 
     new ShurikenCollect(850, 400, 50, 50);
 
-    new Drone(750, 100, 50, 50);
-    new Drone(1000, 100, 50, 50);
+    new Drone(750, 100, 75, 80);
+    new Drone(1000, 100, 75, 80);
     new Spikes(1000, 400, 50, 50);
     new BlockObject2(1000, 250, 50, 50);
 
@@ -257,7 +257,7 @@ function setupGame1() {
 
     new ShurikenCollect(1250, 400, 50, 50);
 
-    new Drone(1300, 150, 50, 50)
+    new Drone(1300, 150, 75, 80)
 
     new Heart(1400, 200, 65, 65);
     new BlockObject2(1400, 250, 50, 50);

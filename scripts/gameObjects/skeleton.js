@@ -130,7 +130,7 @@ class Skeleton extends BaseGameObject {
         shurikenContainer.innerHTML = "";
         for (let i = 0; i < this.shurikenCount; i++) {
             let shuriken = document.createElement("img");
-            shuriken.src = "./images/shuriken.png";
+            shuriken.src = "./images/shuriken_collectible.png";
             shuriken.classList.add("shuriken");
             shurikenContainer.appendChild(shuriken);
         }

@@ -33,7 +33,7 @@ class ShurikenCollect extends BaseGameObject {
 
     constructor(x, y, width, height) {
         super(x, y, width, height);
-        this.loadImagesFromSpritesheet("./images/shuriken.png", 1, 1, 1);
+        this.loadImagesFromSpritesheet("./images/shuriken_collectible.png", 1, 1, 1);
         
   }
 }
