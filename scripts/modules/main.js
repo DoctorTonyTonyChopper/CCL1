@@ -70,10 +70,11 @@ function displayStoryScreen (){
 }
 
 function displayGameFinishedScreen () {
-    let gameFinishedScreen = document.getElementById("gameFinishedScreen");
-    gameFinishedScreen.style.display = "block";
-    global.currentHealth = 3;
-    backgroundMusic.pause();
+    //console.log("displayGameFinishedScreen() executed");
+    //let gameFinishedScreen = document.getElementById("gameFinishedScreen");
+    //gameFinishedScreen.style.display = "block";
+    //global.currentHealth = 3;
+    //backgroundMusic.pause();
 
 
 }
@@ -87,6 +88,10 @@ function gameLoop(totalRunningTime) {
         displayGameOverScreen();
         global.gameRunning = false;
     }
+
+    // Add logs to monitor game state
+     console.log("gameRunning:", global.gameRunning);
+    console.log("Player position:", global.playerObject.x, global.playerObject.y);
 
     global.deltaTime = totalRunningTime - global.prevTotalRunningTime; // Time in milliseconds between frames
     global.deltaTime /= 1000; // Convert milliseconds to seconds for consistency in calculations
@@ -129,7 +134,7 @@ function setupGame() {
     global.rightMoveTrigger = new MoveTrigger(800, 0, 20, 900);
     new Floor(0, 400, 9000, 50);
 
-    new Heart(400, 200, 65, 65);
+    new Heart(400, 200, 50, 65);
     new Enemy(400, 400, 75, 80);
     new Spikes(500, 0, 50, 50, 8000);   
     new ShurikenCollect (630, 400, 50, 50);
@@ -155,7 +160,7 @@ function setupGame() {
     new BlockObject(1000, 200, 50, 50);
     new BlockObject(1050, 200, 50, 50);
     new BlockObject(1100, 200, 50, 50);
-    new Heart(1000, 250, 65, 65);
+    new Heart(1000, 250, 50, 65);
     new ShurikenCollect (1050, 150, 50, 50);
 
     new Enemy(1000, 175, 75, 80);
@@ -186,6 +191,8 @@ function setupGame() {
 }
 
 function setupGame1() {
+    console.log("Current health when entering Level 2:", global.currentHealth);
+    console.log("setupGame1() executed");
     document.getElementById("background").style.backgroundImage = "url(./images/background2.png)";
     let gameOverScreen = document.getElementById("gameOverScreen");
     gameOverScreen.style.display = "none";
@@ -220,7 +227,7 @@ function setupGame1() {
 
     new Enemy(400, 400, 75, 80);
 
-    new Heart(400, 150, 65, 65);
+    new Heart(400, 150, 50, 65);
     new BlockObject2(400, 200, 50, 50);
 
     new Spikes(500, 0, 50, 50, 5000);
@@ -229,7 +236,7 @@ function setupGame1() {
     new ShurikenCollect (600, 150, 50, 50);
     new BlockObject2(600, 200, 50, 50);
 
-    new Drone(750, 100, 75, 80);
+    new Drone(700, 100, 75, 80);
 
     new BlockObject2(800, 250, 50, 50);
     new BlockObject2(800, 200, 50, 50);
@@ -239,14 +246,13 @@ function setupGame1() {
 
     new ShurikenCollect(850, 400, 50, 50);
 
-    new Drone(750, 100, 75, 80);
     new Drone(1000, 100, 75, 80);
     new Spikes(1000, 400, 50, 50);
     new BlockObject2(1000, 250, 50, 50);
 
     new ShurikenCollect(1150, 400, 50, 50);
     new BlockObject2(1150, 200, 50, 50);
-    new Heart(1150, 150, 65, 65);
+    new Heart(1150, 150, 50, 65);
 
     new BlockObject2(1200, 250, 50, 50);
     new BlockObject2(1200, 200, 50, 50);
@@ -259,7 +265,7 @@ function setupGame1() {
 
     new Drone(1300, 150, 75, 80)
 
-    new Heart(1400, 200, 65, 65);
+    new Heart(1400, 200, 50, 65);
     new BlockObject2(1400, 250, 50, 50);
 
 
@@ -268,7 +274,7 @@ function setupGame1() {
 
     new ShurikenCollect(1650, 400, 50, 50);
 
-    new Drone(1700, 200, 50, 50)
+    new Drone(1700, 200, 75, 80)
 
     new Bed(1750, 275, 75, 150);
 

@@ -24,7 +24,7 @@ reactToCollision = function (collidingObject) {
 
 // 🟡🟡 /SHURIKEN COLLISION DETECTION !!! 🟡🟡 
     reactToCollision = function (collidingObject) {   
-    if (collidingObject.name == "Shuriken") { // SKELETON SHOULD DISAPPEAR ONCE COLLIDING WITH THE SHURIKEN
+    if (collidingObject.name == "Shuriken") { // ENEMY SHOULD DISAPPEAR ONCE COLLIDING WITH THE SHURIKEN
             this.active = false; // or this.setVisible(false) 
             // collidingObject.name.active = false; //❌❌❌❌❌❌❌❌❌
         } 

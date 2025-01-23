@@ -1,4 +1,4 @@
-const global = {};
+const global = {}; 
 
 function resetGlobals(){
 global.canvas = document.querySelector("#canvas");

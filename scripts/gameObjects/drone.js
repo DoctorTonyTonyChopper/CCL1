@@ -3,16 +3,16 @@ import { global } from "../modules/global.js";
 
 class Drone extends BaseGameObject {
     name = "Drone";
-    xVelocity = 0; // Horizontal velocity (not used for vertical movement)
-    yVelocity = 50; // Vertical velocity
-    useGravityForces = false; // No gravity applied
+    xVelocity = 0; 
+    yVelocity = 50; 
+    useGravityForces = false; 
     movingDown = true; // Start by moving down
-    directionChangeInterval = 2000; // Change direction every 3 seconds
+    directionChangeInterval = 2000; 
     lastDirectionChangeTime = Date.now();
 
     reactToCollision = function (collidingObject) {
         if (collidingObject.name == "Shuriken") {
-            this.active = false; // Deactivate the drone on collision
+            this.active = false; 
         }
     };
 
@@ -26,7 +26,7 @@ class Drone extends BaseGameObject {
     };
 
     update = function () {
-        // Move up or down based on the direction
+  
         if (this.movingDown) {
             this.y += this.yVelocity * global.deltaTime; // Move down
         } else {
