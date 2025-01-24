@@ -18,12 +18,12 @@ import {backgroundMusic, dmgEffect, healthEffect } from "./sound.js";
 let gameOverButton = document.getElementById("gameOverButton");
 gameOverButton.addEventListener("click", setupGame);
 
-let gameFinishedButton = document.getElementById("gameFinishedButton");
-gameFinishedButton.addEventListener("click", () => { 
-    // Hide the game Finished screen
-    let gameFinishedScreen = document.getElementById("gameFinishedScreen");
-    gameFinishedScreen.style.display = "none";
-    // Start the game setup
+let gameClearedButton = document.getElementById("gameClearedButton");
+gameClearedButton.addEventListener("click", () => {
+    // Hide the game cleared screen
+    let gameClearedScreen = document.getElementById("gameClearedScreen");
+    gameClearedScreen.style.display = "none";
+    // Start the game start screen
     displayGameStartScreen();
 });
 
@@ -48,6 +48,15 @@ let startButton = document.getElementById("startButton");
     
 });
 
+function displayGameClearedScreen () {
+    console.log("displayGameClearedScreen() executed");
+
+    let gameClearedScreen = document.getElementById("gameClearedScreen");
+gameClearedScreen.style.display = "block";
+global.currentHealth = 3;
+backgroundMusic.pause();
+}
+
 function displayGameOverScreen () {
     let gameOverScreen = document.getElementById("gameOverScreen");
     gameOverScreen.style.display = "block";
@@ -69,15 +78,7 @@ function displayStoryScreen (){
 
 }
 
-function displayGameFinishedScreen () {
-    //console.log("displayGameFinishedScreen() executed");
-    //let gameFinishedScreen = document.getElementById("gameFinishedScreen");
-    //gameFinishedScreen.style.display = "block";
-    //global.currentHealth = 3;
-    //backgroundMusic.pause();
 
-
-}
 
 function gameLoop(totalRunningTime) {
     if (global.prevTotalRunningTime == 0) {
@@ -122,8 +123,8 @@ function setupGame() {
     let storyScreen = document.getElementById("storyScreen");
     storyScreen.style.display = "none";
 
-    let gameFinishedScreen = document.getElementById("gameFinishedScreen");
-    gameFinishedScreen.style.display = "none";
+    let gameClearedScreen = document.getElementById("gameClearedScreen");
+    gameClearedScreen.style.display = "none";
 
     backgroundMusic.loop = true;
     backgroundMusic.play();
@@ -174,7 +175,7 @@ function setupGame() {
     new Drone (1400, 120, 75, 80);
     new Spikes(1550, 0, 50, 50, 18000);   
     new Drone (1700, 220, 75, 80);
-    new Door(1775, 300, 100, 110);
+    new Door(1600, 300, 100, 110);
 
     console.log(global.playerObject)
 
@@ -196,8 +197,9 @@ function setupGame1() {
     document.getElementById("background").style.backgroundImage = "url(./images/background2.png)";
     let gameOverScreen = document.getElementById("gameOverScreen");
     gameOverScreen.style.display = "none";
-    let gameFinishedScreen = document.getElementById("gameFinishedScreen");
-    gameFinishedScreen.style.display = "none";
+
+    let gameClearedScreen = document.getElementById("gameClearedScreen");
+    gameClearedScreen.style.display = "none";
 
     backgroundMusic.loop = true;
     backgroundMusic.play();
@@ -295,7 +297,7 @@ function setupGame1() {
 
 
 
-export {setupGame, displayGameOverScreen, displayGameStartScreen, displayStoryScreen, setupGame1, displayGameFinishedScreen};
+export {setupGame, displayGameClearedScreen, displayGameStartScreen, displayStoryScreen, setupGame1, displayGameOverScreen};
 
 
 

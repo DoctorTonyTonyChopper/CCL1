@@ -140,11 +140,11 @@ body {
     height: 500px; /* change according to your game */
   }
 
-  #gameFinishedScreen {
+  #gameClearedScreen {
     position: relative;
     display: none;
     z-index: 30;
-    background-image: url('/images/gamefinishedscreen.PNG');
+    background-image: url('/images/gamefinishedscreen.png');
 
     background-size: cover;        /* Ensures the image covers the whole container */
     background-position: center;   /* Centers the image */
@@ -154,7 +154,7 @@ body {
     height: 500px; /* change according to your game */
   }
 
-  #gameFinishedButton{
+#gameClearedButton{
     position: absolute;
     top: 50%;           /* Move to 50% from top */
     left: 45%;          /* Move to 50% from left */
@@ -167,45 +167,11 @@ body {
     cursor: pointer;
   }
 
-  #gameFinishedButton:hover{
+  #gameClearedButton:hover{
     background-color: black;
     color: white;
   }
 
-/*
-  #gameFinishedScreen {
-    position: relative;
-    display: block;
-    z-index: 30;
-    background-color: red;
-
-    background-size: cover;       
-    background-position: center;   
-    background-repeat: no-repeat;  
-
-    width: 1000px; 
-    height: 500px; 
-  }
-
-  #gameFinishedButton{
-    position: absolute;
-    top: 50%;         
-    left: 50%;        
-    transform: translate(-50%, -50%);
-    padding: 10px 20px;
-    background-color: rgb(110, 25, 25);
-    color: white;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-
-  #gameFinishedButton:hover{
-    background-color: black;
-    color: white;
-  } 
-
-*/
 #gameStartScreen{
   position: relative;
   display: block;
