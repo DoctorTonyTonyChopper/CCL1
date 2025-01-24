@@ -172,9 +172,8 @@ function setupGame() {
     new BlockObject(1300, 350, 50, 50);
     new BlockObject(1300, 300, 50, 50);
 
-    new Drone (1400, 120, 75, 80);
-    new Spikes(1550, 0, 50, 50, 18000);   
-    new Drone (1700, 220, 75, 80);
+    new Spikes(1400, 0, 50, 50, 18000);   
+    new Drone (1500, 250, 75, 80);
     new Door(1600, 300, 100, 110);
 
     console.log(global.playerObject)
