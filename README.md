@@ -159,7 +159,7 @@ WHEN I COLLIDE WITH THE DOOR IN THE FIRST LEVEL, displayGameFinishedScreen gets 
 
 ### 01-02-2025
 - Adjust the names in the code 🚨🚨
-- Change background of the page 👨🏽‍🔧
+- Add a proper background (image) for the website 👨🏽‍🔧
 - Adjust sound for drone 👨🏽‍🔧
 - Adjust sound for enemy 👨🏽‍🔧
 - Maybe the thrown Shuriken should be animated? 👨🏽‍🔧
