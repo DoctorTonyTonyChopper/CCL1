@@ -235,7 +235,7 @@ function setupGame1() {
 
     new ShurikenCollect(850, 400, 50, 50);
 
-    new Drone(1000, 85, 75, 80);
+    new Drone(1000, 3, 75, 80);
     new Spikes(1000, 400, 50, 50);
     new BlockObject2(1000, 250, 50, 50);
 
