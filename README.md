@@ -6,7 +6,8 @@
 ---
 
 ## 🌐 **Play the Game**
-[Click here to play the game!](https://your-github-username.github.io/repository-name)
+[Click here to play the game!](https://doctortonytonychopper.github.io/CCL1/)
+PLEASE play it locally instead if possible, as my different screens (Home screen, story screen, game over screen and game clear screen) don't get displayed for some reason. If you run it locally, they do.
 
 ---
 
