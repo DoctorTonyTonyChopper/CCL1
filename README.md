@@ -64,7 +64,7 @@ Below are the sprites used to create characters and objects in the game, all of 
 </div>
 
 <div style="text-align: center;">
-  <img src="/images/spikes.png" alt="Enemy Spikes Image" width="500">
+  <img src="/images/spikes.png" alt="Enemy Spikes Image" width="50">
   <p>*Figure 6: Enemy Spikes sprite*</p>
 </div>
 

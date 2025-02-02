@@ -1,5 +1,7 @@
 ### My Plan for CCL
 
+Hi, I accidentally deleted my diary file and put it in my project folder again by dragging and dropping (I had a backup). Now it says that I created my diary today, however, I promise that I did this diary starting from the first day and updated it every day religiously haha.
+
 ******************
 
 ### Day 1 13-01-2025
