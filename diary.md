@@ -81,7 +81,7 @@ Plan for the day:
     - Enemy ✅
     - wall objects ❌
     - door ✅
-    - Capsule ("Bed") ✅
+    - Capsule ✅
     - heart ✅
     - shuriken ✅
 - Canvas border should glow red when colliding with an enemy ✅
