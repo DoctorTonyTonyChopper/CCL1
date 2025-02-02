@@ -87,13 +87,14 @@ Below are the sprites used to create characters and objects in the game, all of 
 ## ✍️ **Reflection**
 
 ### What went well:
-- **Creative Design:** The theme and style came together seamlessly, and the sprites were fun to design.
-- **Core Mechanics:** The gravity-based gameplay worked better than expected and provided a unique challenge.
+- **Creative Design:** I knew which kind of aestehtic I was going for since I started the game (2D-retro-style). I also knew which main character I was gonna use and had several ides for enemies in my mind. Drawing these was probably the easiest part of it all. 
+- **Schedule** I had a lot of stuff implemented after the first week already. I would say that I had a pretty good pace, until bugs appeared and started to frustrate me. However, I was done with the core game quickly and thus was able to add more optional stuff earlier than thought. 
 
 ### Challenges:
-- **Time Constraints:** Implementing all the features we envisioned wasn’t possible due to the limited timeframe.
+- **Debugging:** The debugging process was most definitely my personal hell and what I hated the most. Fixing one problem caused another, which was VERY frustrating. But in the end, thankfully everything worked out (I think). I am glad for the support I got from tutors, friends and myself, hihi.
 - **Bug Fixes:** Handling collisions and edge cases for gravity mechanics was tricky.
 
 ### Lessons Learned:
-- **Prototyping Matters:** Testing early prototypes helped refine the core mechanics quickly.
-- **Keep it Simple:** Focusing on one unique mechanic instead of multiple features made the game more polished.
+- **Make it functional first:** It's important to have a functioning base first. Once you have that, you can start implementing more advanced stuff that enhances the game. Just make sure that the core is finished before doing so.
+- **Take it step by step:** Don't try to implement several features at once, as this could mess things up. Make a list, order it from the easiest to the hardest or important to less important and work through it.
+
