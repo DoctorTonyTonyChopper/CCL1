@@ -3,19 +3,20 @@ import { global } from "../modules/global.js";
 
 class Drone extends BaseGameObject {
     name = "Drone";
-    xVelocity = 0; 
-    yVelocity = 50; 
-    useGravityForces = false; 
+    xVelocity = 0;
+    yVelocity = 50; // Vertical movement speed
+    useGravityForces = false;
     movingDown = true; // Start by moving down
-    directionChangeInterval = 2000; 
-    lastDirectionChangeTime = Date.now();
+    directionChangeInterval = 2000; // It changes its direction every 2 seconds
+    lastDirectionChangeTime = Date.now(); // This tracks the last time the direction changed
 
     reactToCollision = function (collidingObject) {
         if (collidingObject.name == "Shuriken") {
-            this.active = false; 
+            this.active = false; // If the drone collides with the shuriken, the drone disappears
         }
     };
 
+    // Box bounds of the object are defined
     getBoxBounds = function () {
         return {
             left: this.x + 18,
@@ -25,8 +26,9 @@ class Drone extends BaseGameObject {
         };
     };
 
+    // THis function updates the drone's movement and direction over time
     update = function () {
-  
+        // Based on the direction, move up or down
         if (this.movingDown) {
             this.y += this.yVelocity * global.deltaTime; // Move down
         } else {
@@ -39,7 +41,7 @@ class Drone extends BaseGameObject {
             this.lastDirectionChangeTime = Date.now(); // Reset timer
         }
 
-        // Ensure the drone stays within the game bounds
+        // This ensures that the drone stays within the game bounds
         if (this.y <= 0) {
             this.y = 0;
             this.movingDown = true; // Force it to move down
@@ -51,7 +53,7 @@ class Drone extends BaseGameObject {
 
     constructor(x, y, width, height) {
         super(x, y, width, height);
-        this.loadImagesFromSpritesheet("./images/drone.png", 4, 1, 4);
+        this.loadImagesFromSpritesheet("./images/spritesheets/drone.png", 4, 1, 4);
         this.switchCurrentSprites(0, 3);
     }
 }

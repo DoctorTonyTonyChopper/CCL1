@@ -9,38 +9,42 @@ import { ShurikenCollect } from "../gameObjects/shurikenCollect.js";
 import { Enemy } from "../gameObjects/enemy.js";
 import { Shuriken } from "../gameObjects/shuriken.js";
 import { Door } from "../gameObjects/door.js";
-import { Bed } from "../gameObjects/bed.js";
+import { Capsule } from "../gameObjects/capsule.js";
 import { Drone } from "../gameObjects/drone.js";
 import { Spikes } from "../gameObjects/spikes.js";
 import {backgroundMusic, dmgEffect, healthEffect } from "./sound.js";
 
 
+// gameOverButton that is displayed on the GameOverScreen
 let gameOverButton = document.getElementById("gameOverButton");
 gameOverButton.addEventListener("click", setupGame);
 
+// gameClearedButton that is displayed on the GameClearedScreen
 let gameClearedButton = document.getElementById("gameClearedButton");
 gameClearedButton.addEventListener("click", () => {
     // Hide the game cleared screen
     let gameClearedScreen = document.getElementById("gameClearedScreen");
     gameClearedScreen.style.display = "none";
+    global.currentHealth = 3;
     // Start the game start screen
     displayGameStartScreen();
 });
 
-// Start Game Button
+// gameStartButton that is displayed on the GameStartScreen/Home screen (when the website is launched)
 let gameStartButton = document.getElementById("gameStartButton");
 gameStartButton.addEventListener("click", () => {
     // Hide the game start screen
     let gameStartScreen = document.getElementById("gameStartScreen");
     gameStartScreen.style.display = "none";
-    // Start the game setup
+    // Start the displayStoryScreen 
     displayStoryScreen();
 });
 
+// Start Button that is displayed on the StoryScreen
 let startButton = document.getElementById("startButton");
     startButton.addEventListener("click", () => {
     // Hide the story screen
-    document.getElementById("background").style.backgroundImage = "url(./images/background.jpg)";
+    document.getElementById("background").style.backgroundImage = "url(./images/levelbackgrounds/background.jpg)";
     let storyScreen = document.getElementById("storyScreen");
     storyScreen.style.display = "none";
     // Start the game setup
@@ -48,15 +52,17 @@ let startButton = document.getElementById("startButton");
     
 });
 
+// Function to display a screen when the game is finished
 function displayGameClearedScreen () {
     console.log("displayGameClearedScreen() executed");
 
     let gameClearedScreen = document.getElementById("gameClearedScreen");
-gameClearedScreen.style.display = "block";
-global.currentHealth = 3;
-backgroundMusic.pause();
+    gameClearedScreen.style.display = "block";
+    //global.currentHealth = 3;
+    backgroundMusic.pause();
 }
 
+// Function to display a screen when the game is over
 function displayGameOverScreen () {
     let gameOverScreen = document.getElementById("gameOverScreen");
     gameOverScreen.style.display = "block";
@@ -66,12 +72,14 @@ function displayGameOverScreen () {
 
 }
 
+// Function to display the GameStartScreen (home screen) which is called once the website is opened
  function displayGameStartScreen (){
     let gameStartScreen = document.getElementById("gameStartScreen");
     gameStartScreen.style.display = "block";
 
 }
 
+// Function to display the game story screen which is displayed once the  gameStartButton is pressed on the GameStartScreen (home screen)
 function displayStoryScreen (){
     let storyScreen = document.getElementById("storyScreen");
     storyScreen.style.display = "block";
@@ -90,8 +98,8 @@ function gameLoop(totalRunningTime) {
         global.gameRunning = false;
     }
 
-    // Add logs to monitor game state
-     console.log("gameRunning:", global.gameRunning);
+    // Logs to monitor game state
+    console.log("gameRunning:", global.gameRunning);
     console.log("Player position:", global.playerObject.x, global.playerObject.y);
 
     global.deltaTime = totalRunningTime - global.prevTotalRunningTime; // Time in milliseconds between frames
@@ -116,7 +124,9 @@ function gameLoop(totalRunningTime) {
 
 }
 
+// This function sets up the first level of the game
 function setupGame() {
+    document.getElementById("background").style.backgroundImage = "url(./images/levelbackgrounds/background.jpg)";
     let gameOverScreen = document.getElementById("gameOverScreen");
     gameOverScreen.style.display = "none";
 
@@ -173,27 +183,19 @@ function setupGame() {
     new BlockObject(1300, 300, 50, 50);
 
     new Spikes(1400, 0, 50, 50, 18000);   
-    new Drone (1500, 250, 75, 80);
+    new Drone (1500, 175, 75, 80);
     new Door(1600, 300, 100, 110);
 
     console.log(global.playerObject)
 
-
-
-    // setup your game here - means: Create instances of the GameObjects that belong to your game.
-    // e.g.: 
-    /*    
-                global.playerObject = new PacMan(200, 300, 60, 60);
-                new Wall(0, 0, 100, 100);
-                new Candy(100, 100, 100, 100);
-    }*/
     requestAnimationFrame(gameLoop);
 }
 
+// This function sets up the second level of the game
 function setupGame1() {
     console.log("Current health when entering Level 2:", global.currentHealth);
     console.log("setupGame1() executed");
-    document.getElementById("background").style.backgroundImage = "url(./images/background2.png)";
+    document.getElementById("background").style.backgroundImage = "url(./images/levelbackgrounds/background2.png)";
     let gameOverScreen = document.getElementById("gameOverScreen");
     gameOverScreen.style.display = "none";
 
@@ -208,20 +210,6 @@ function setupGame1() {
     global.leftMoveTrigger = new MoveTrigger(0, 0, 20, 900);
     global.rightMoveTrigger = new MoveTrigger(800, 0, 20, 900);
 
-
-    /*
-    const bg2 = document.getElementById("background");
-
-    // Changing background for Level 2
-    bg2.style.background = "url('../images/background2.png')"; 
-    bg2.style.position = "absolute";
-    bg2.style.left = "0";
-    bg2.style.top = "0";
-    bg2.style.width = "1000px";
-    bg2.style.height = "500px";
-    bg2.style.backgroundSize = "cover";
-    bg2.style.zIndex = "0"; 
-    */
     new Floor(0, 400, 9000, 50);
 
     new BlockObject2(200, 280, 50, 50);
@@ -247,7 +235,7 @@ function setupGame1() {
 
     new ShurikenCollect(850, 400, 50, 50);
 
-    new Drone(1000, 100, 75, 80);
+    new Drone(1000, 85, 75, 80);
     new Spikes(1000, 400, 50, 50);
     new BlockObject2(1000, 250, 50, 50);
 
@@ -264,32 +252,19 @@ function setupGame1() {
 
     new ShurikenCollect(1250, 400, 50, 50);
 
-    new Drone(1300, 150, 75, 80)
-
     new Heart(1400, 200, 50, 65);
     new BlockObject2(1400, 250, 50, 50);
-
-
 
     new Enemy(1400, 400, 75, 80);
 
     new ShurikenCollect(1650, 400, 50, 50);
 
-    new Drone(1700, 200, 75, 80)
+    new Drone(1600, 175, 75, 80)
 
-    new Bed(1750, 275, 75, 150);
+    new Capsule(1750, 275, 75, 150);
 
     console.log(global.playerObject)
 
-
-
-    // setup your game here - means: Create instances of the GameObjects that belong to your game.
-    // e.g.: 
-    /*    
-                global.playerObject = new PacMan(200, 300, 60, 60);
-                new Wall(0, 0, 100, 100);
-                new Candy(100, 100, 100, 100);
-    }*/
     requestAnimationFrame(gameLoop);
 }
 

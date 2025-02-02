@@ -3,17 +3,18 @@ import { global } from "../modules/global.js";
 
 class Heart extends BaseGameObject {
     name = "Heart";
-    xVelocity = 0;
+    xVelocity = 0; // The heart has no movement, therefore the velocities are 0
     yVelocity = 0;
     useGravityForces = true;
 
     reactToCollision = function (collidingObject) {
         if (collidingObject.name == "Skeleton") {
             this.active = false;
+            // If the Player "Skeleton" collides with the heart, the heart disappears
         }
     }
 
-
+    // Box bounds of the object are defined
     getBoxBounds = function () {
         let bounds = {
             left: this.x + 18,
@@ -24,23 +25,26 @@ class Heart extends BaseGameObject {
         return bounds;
     }
 
-    update = function() {
+    update = function () {
         this.x += this.xVelocity * global.deltaTime;
         this.y += this.yVelocity * global.deltaTime;
         if (this.xVelocity == 0) {
+            // Even with no movement, the spritesheet animation works because the xvelocity is 0 in this if statement
             this.switchCurrentSprites(this.animationData.firstSpriteIndex);
         }
     }
 
-   /* draw = function () {
-        global.ctx.fillStyle = "#000000";
-        global.ctx.fillRect(this.x, this.y, this.width, this.height);
-    }*/
+    /* draw = function () {
+         global.ctx.fillStyle = "#000000";
+         global.ctx.fillRect(this.x, this.y, this.width, this.height);
+     }*/
 
     constructor(x, y, width, height) {
         super(x, y, width, height);
-        this.loadImagesFromSpritesheet("./images/heart.png", 16, 1, 16);
-        this.switchCurrentSprites(0, 15);    }
+        this.loadImagesFromSpritesheet("./images/collectibles/heart.png", 16, 1, 16);
+        // The heart has a movement animation, therefore I linked it as a spritesheet
+        this.switchCurrentSprites(0, 15);
+    }
 }
 
-export {Heart}
+export { Heart }

@@ -3,7 +3,7 @@ import { global } from "../modules/global.js";
 import { setupGame1, displayGameOverScreen } from "../modules/main.js";
 import { Shuriken } from "./shuriken.js";
 import { Spikes } from "./spikes.js";
-import {dmgEffect, healthEffect } from "../modules/sound.js";
+import { dmgEffect, healthEffect } from "../modules/sound.js";
 
 
 class Skeleton extends BaseGameObject {
@@ -24,12 +24,12 @@ class Skeleton extends BaseGameObject {
             console.log(global.currentHealth);
             healthEffect.play();
         }
-        if(collidingObject.name == "ShurikenCollect"){
+        if (collidingObject.name == "ShurikenCollect") {
             this.shurikenCount++
             this.updateShurikenDisplay();
         }
-        
-        if(collidingObject.name == "Enemy" || collidingObject.name == "Spikes" || collidingObject.name == "Drone" ) {
+
+        if (collidingObject.name == "Enemy" || collidingObject.name == "Spikes" || collidingObject.name == "Drone") {
             this.changeCurrentHealth(-1);
             console.log(global.currentHealth);
             console.log(collidingObject.x, this.x);
@@ -44,15 +44,16 @@ class Skeleton extends BaseGameObject {
 
             // Add the red glow class
             gameContainer.classList.add("gameContainer-glow-red");
-        
+
             // Remove the class after 0.5 seconds
             setTimeout(() => {
                 gameContainer.classList.remove("gameContainer-glow-red");
             }, 500);
         }
 
-} 
+    }
 
+    // Box bounds of the object are defined
     getBoxBounds = function () {
         let bounds = {
             left: this.x + 18,
@@ -71,15 +72,10 @@ class Skeleton extends BaseGameObject {
         }
     }
 
-    /*draw = function () {
-        global.ctx.fillStyle = "#000000";
-        global.ctx.fillRect(this.x, this.y, this.width, this.height);
-    }*/
-
     constructor(x, y, width, height) {
         super(x, y, width, height);
         //this.loadImages(["./images/apple.png"]);
-        this.loadImagesFromSpritesheet("./images/BODY_player.png", 9, 4, 9);
+        this.loadImagesFromSpritesheet("./images/spritesheets/BODY_player.png", 9, 4, 9);
         this.switchCurrentSprites(18, 18);
         this.updateHealthDisplay();
         this.updateShurikenDisplay();
@@ -90,7 +86,7 @@ class Skeleton extends BaseGameObject {
         healthContainer.innerHTML = "";
         for (let i = 0; i < global.currentHealth; i++) {
             let heart = document.createElement("img");
-            heart.src = "./images/heart1.png";
+            heart.src = "./images/healthContainerItem.png";
             heart.classList.add("heart");
             healthContainer.appendChild(heart);
         }
@@ -121,29 +117,29 @@ class Skeleton extends BaseGameObject {
         this.updateHealthDisplay();
 
 
-        
+
     }
 
-    
+
     updateShurikenDisplay = function () {
         let shurikenContainer = document.getElementById("shuriken-bar");
         shurikenContainer.innerHTML = "";
         for (let i = 0; i < this.shurikenCount; i++) {
             let shuriken = document.createElement("img");
-            shuriken.src = "./images/shuriken_collectible.png";
+            shuriken.src = "./images/collectibles/shuriken_collectible.png";
             shuriken.classList.add("shuriken");
             shurikenContainer.appendChild(shuriken);
         }
     }
 
-    throwing = function() {
-            if (this.shurikenCount > 0) {
-                new Shuriken(global.playerObject.faceRight == true ? global.playerObject.x - 35 + global.playerObject.width : global.playerObject.x, global.playerObject.y + 30, 40, 40, global.playerObject.faceRight);
-                this.shurikenCount--;
-                this.updateShurikenDisplay();
-            }
+    throwing = function () {
+        if (this.shurikenCount > 0) {
+            new Shuriken(global.playerObject.faceRight == true ? global.playerObject.x - 35 + global.playerObject.width : global.playerObject.x, global.playerObject.y + 30, 40, 40, global.playerObject.faceRight);
+            this.shurikenCount--;
+            this.updateShurikenDisplay();
+        }
     }
-    
+
 }
 
 

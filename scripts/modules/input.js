@@ -3,9 +3,10 @@ import { Shuriken } from "../gameObjects/shuriken.js"; // Ensure correct path
 import {shurikenEffect } from "./sound.js";
 
 
-let lastShurikenTime = 0;
-const shurikenCooldown = 250;
+let lastShurikenTime = 0; // This is the last time a shuriken was thrown
+const shurikenCooldown = 250; // This is a cooldown in milliseconds for the shuriken so it does not get spammed too much (0.25 seconds)
 
+// This function handles the player movement when pressing the keys d, a and w
 function move(event) {
     switch(event.key) {
         case "d":
@@ -30,6 +31,7 @@ function move(event) {
     }
 }
 
+// The movement stops when the keys d and a are released
 function stop(event) {
     switch(event.key) {
         case "d":
@@ -45,7 +47,7 @@ function stop(event) {
     }
 }
 
-// Spacebar event to spawn a Shuriken only once
+// Spacebar event to spawn a Shuriken with a cooldown
 document.addEventListener("keydown", function (event) {
     if (event.code === "Space" && !Shuriken.shurikenExists) {
 
@@ -53,18 +55,8 @@ document.addEventListener("keydown", function (event) {
         if (currentTime - lastShurikenTime >= shurikenCooldown) { // Enforce cooldown
             lastShurikenTime = currentTime;
             
-        global.playerObject.throwing(); // declaration is in skeleton
-        shurikenEffect.play();
-
-
-
-
-        // Adjust position
-        /*if (global.gameObjects) {
-            global.gameObjects.push(newShuriken);
-            Shuriken.shurikenExists = true; // Prevent multiple instances
-        } else {
-            console.error("Error: global.gameObjects is undefined.");*/
+        global.playerObject.throwing(); // declaration is in Skeleton, shuriken gets thrown
+        shurikenEffect.play(); // Sound effect when shuriken is thrown
         }
     }}
 );
@@ -72,9 +64,10 @@ document.addEventListener("keydown", function (event) {
 // Remove the shurikenExists flag when the shuriken is removed
 document.addEventListener("keyup", function (event) {
     if (event.code === "Space") {
-        Shuriken.shurikenExists = false;
+        Shuriken.shurikenExists = false; // Allowing new shurikens to be thrown
     }
 });
 
+// Adding event listeners for movement and stopping
 document.addEventListener("keypress", move);
 document.addEventListener("keyup", stop);

@@ -7,32 +7,19 @@ class Enemy extends BaseGameObject {
     xVelocity = 50;
     yVelocity = 0;
     useGravityForces = true;
-    movingRight = true;
-    directionChangeInterval = 3000; // 🚨🚨🚨🚨🚨🚨 Change direction every 3 seconds
-    lastDirectionChangeTime = Date.now(); // 🚨🚨🚨🚨🚨🚨 
+    movingRight = true; // Tracks the direction of the movement
+    directionChangeInterval = 3000; // 🚨🚨🚨🚨🚨🚨 Change movement direction every 3 seconds
+    lastDirectionChangeTime = Date.now(); // 🚨🚨🚨🚨🚨🚨 This stores the last time the direction changed
 
-/*
-reactToCollision = function (collidingObject) {
-    if (collidingObject.name == "Skeleton") {
-        if (this.x > collidingObject.x) { // collision from the left
-            collidingObject.x -= 100;
-        } else if (this.x < collidingObject.x) { // collision from the right
-            collidingObject.x += 100;
+
+    // 🟡🟡 /SHURIKEN COLLISION DETECTION !!! 🟡🟡 
+    reactToCollision = function (collidingObject) {
+        if (collidingObject.name == "Shuriken") {
+            this.active = false; // Enemy disappears once colliding with the shuriken
         }
     }
-*/
 
-// 🟡🟡 /SHURIKEN COLLISION DETECTION !!! 🟡🟡 
-    reactToCollision = function (collidingObject) {   
-    if (collidingObject.name == "Shuriken") { // ENEMY SHOULD DISAPPEAR ONCE COLLIDING WITH THE SHURIKEN
-            this.active = false; // or this.setVisible(false) 
-            // collidingObject.name.active = false; //❌❌❌❌❌❌❌❌❌
-        } 
-}
-
-
-
-
+    // Box bounds of the object are defined
     getBoxBounds = function () {
         let bounds = {
             left: this.x + 18,
@@ -43,30 +30,31 @@ reactToCollision = function (collidingObject) {
         return bounds;
     }
 
-    update = function() { 
+    // Updates the enemy's position and direction over time
+    update = function () {
         // Move left or right based on direction
         if (this.movingRight) {
             this.x += this.xVelocity * global.deltaTime;
         } else {
             this.x -= this.xVelocity * global.deltaTime;
         }
-    
-
-    // Change direction every few seconds
-    if (Date.now() - this.lastDirectionChangeTime > this.directionChangeInterval) {
-        this.movingRight = !this.movingRight; // Flip direction
-        this.lastDirectionChangeTime = Date.now(); // Reset timer
-    } }
 
 
-    constructor(x, y, width, height){
+        // Change direction every few seconds
+        if (Date.now() - this.lastDirectionChangeTime > this.directionChangeInterval) {
+            this.movingRight = !this.movingRight; // Flip direction
+            this.lastDirectionChangeTime = Date.now(); // Reset timer
+        }
+    }
+
+
+    constructor(x, y, width, height) {
         super(x, y, width, height);
-        //this.loadImages(["./images/enemy.png"]);
-        this.loadImagesFromSpritesheet("./images/enemy.png", 4, 1, 4);
+        this.loadImagesFromSpritesheet("./images/spritesheets/enemy.png", 4, 1, 4);
         this.switchCurrentSprites(0, 3);
     }
 
 }
 
 
-export {Enemy};
+export { Enemy };

@@ -9,11 +9,12 @@ class ShurikenCollect extends BaseGameObject {
 
     reactToCollision = function (collidingObject) {
         if (collidingObject.name == "Skeleton") {
-            this.active = false;
+            this.active = false; // Once the Player ("Skeleton") collides with the COLLECTIBLE Shuriken, the shuriken disappears
         }
     }
 
 
+    // Box bounds of the object are defined
     getBoxBounds = function () {
         let bounds = {
             left: this.x + 18,
@@ -24,18 +25,11 @@ class ShurikenCollect extends BaseGameObject {
         return bounds;
     }
 
-
-
-   /* draw = function () {
-        global.ctx.fillStyle = "#000000";
-        global.ctx.fillRect(this.x, this.y, this.width, this.height);
-    }*/
-
     constructor(x, y, width, height) {
         super(x, y, width, height);
-        this.loadImagesFromSpritesheet("./images/shuriken_collectible.png", 1, 1, 1);
-        
-  }
+        this.loadImagesFromSpritesheet("./images/collectibles/shuriken_collectible.png", 1, 1, 1);
+
+    }
 }
 
-export {ShurikenCollect}
+export { ShurikenCollect }
