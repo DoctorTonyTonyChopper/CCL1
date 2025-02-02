@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: url('../images/pageBackground.jpg') no-repeat center center fixed; /* Replace with your background image */
+  background: url('../images/pageBackground.jpg') no-repeat center center fixed; 
   background-size: cover;
   overflow: hidden; /* Prevent unwanted scrolling if the image is large */
 }
@@ -17,10 +17,9 @@ body {
 #gameContainer {
     overflow: hidden;
     position: relative;
-    width: 1000px; /* change according to your game */
-    height: 500px; /* change according to your game */
-   /* border: 2px solid #2e1701; Optional: Add a border to see the effect */
-    border-radius: 10px; /* Adjust the value for more or less rounded corners */
+    width: 1000px; /* change according to game */
+    height: 500px; /* change according to game */
+    border-radius: 10px; /* rounded corners */
 }
 
 
@@ -95,10 +94,10 @@ body {
 
     background-size: cover;        /* Ensures the image covers the whole container */
     background-position: center;   /* Centers the image */
-    background-repeat: no-repeat;  /* Prevents tiling the image */
+    background-repeat: no-repeat; 
 
-    width: 1000px; /* change according to your game */
-    height: 500px; /* change according to your game */
+    width: 1000px; /* change according to game */
+    height: 500px; /* change according to game */
   }
 
   #gameOverButton{
@@ -127,10 +126,10 @@ body {
 
     background-size: cover;        /* Ensures the image covers the whole container */
     background-position: center;   /* Centers the image */
-    background-repeat: no-repeat;  /* Prevents tiling the image */
+    background-repeat: no-repeat; 
 
-    width: 1000px; /* change according to your game */
-    height: 500px; /* change according to your game */
+    width: 1000px; /* change according to game */
+    height: 500px; /* change according to game */
   }
 
   #gameClearedScreen {
@@ -141,10 +140,10 @@ body {
 
     background-size: cover;        /* Ensures the image covers the whole container */
     background-position: center;   /* Centers the image */
-    background-repeat: no-repeat;  /* Prevents tiling the image */
+    background-repeat: no-repeat; 
 
-    width: 1000px; /* change according to your game */
-    height: 500px; /* change according to your game */
+    width: 1000px; /* change according to game */
+    height: 500px; /* change according to game */
   }
 
 #gameClearedButton{
@@ -173,14 +172,14 @@ body {
 
   background-size: cover;        /* Ensures the image covers the whole container */
   background-position: center;   /* Centers the image */
-  background-repeat: no-repeat;  /* Prevents tiling the image */
+  background-repeat: no-repeat;
 
-  width: 1000px; /* change according to your game */
-  height: 500px; /* change according to your game */
+  width: 1000px; /* change according to game */
+  height: 500px; /* change according to game */
 }
 
 #gameStartButton{
-  display: inline-block; /* or block */
+  display: inline-block; 
   position: absolute;
   top: 65%;           /* Move to 50% from top */
   left: 75%;          /* Move to 50% from left */
@@ -201,7 +200,7 @@ body {
 }
 
 #startButton{
-  display: inline-block; /* or block */
+  display: inline-block; 
   position: absolute;
   top: 86%;           /* Move to 50% from top */
   left: 50%;          /* Move to 50% from left */
@@ -224,14 +223,12 @@ body {
   .heart {
     width: 30px;
     height: 30px;
-    /* background: url('heart.png') no-repeat center/cover; */
     z-index: 20;
   }
 
   .shuriken {
     width: 30px;
     height: 30px;
-    /* background: url('heart.png') no-repeat center/cover; */
     z-index: 20;
   }
 

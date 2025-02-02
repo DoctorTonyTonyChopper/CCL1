@@ -14,7 +14,6 @@ class Capsule extends BaseGameObject {
             // If the Player ("Skeleton") collides with the capsule at the end of the second level, the game is cleared by calling the displayGameClearedScreen function
             //global.currentHealth = 3;
             displayGameClearedScreen();
-            // If the Player ("Skeleton") collides with the capsule at the end of the second level, the game is cleared by calling the displayGameClearedScreen function
 
         }
     }

@@ -14,7 +14,7 @@ class Enemy extends BaseGameObject {
     lastDirectionChangeTime = Date.now(); // 🚨🚨🚨🚨🚨🚨 This stores the last time the direction changed
 
 
-    // 🟡🟡 /SHURIKEN COLLISION DETECTION !!! 🟡🟡 
+    // SHURIKEN COLLISION DETECTION !!! 
     reactToCollision = function (collidingObject) {
         if (collidingObject.name == "Shuriken") {
             this.active = false; // Enemy disappears once colliding with the shuriken

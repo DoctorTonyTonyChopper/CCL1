@@ -6,9 +6,9 @@ const shurikenCollectEffect = new Audio('./sounds/shurikencollect.mp3'); // Shur
 
 const healthEffect = new Audio('./sounds/health.mp3'); // Gaining health sound effect
 
-const enemyDeathEffect = new Audio('./sounds/enemydeath.mp3'); // Sound effect when enemy dies
+const enemyDeathEffect = new Audio('./sounds/enemydeath.mp3'); // Sound effect when enemy robot dies
 
-const droneDeathEffect = new Audio('./sounds/dronedeath.mp3'); // Sound effect when enemy dies
+const droneDeathEffect = new Audio('./sounds/dronedeath.mp3'); // Sound effect when enemy drone dies
 
 const openingDoor = new Audio('./sounds/opendoor.mp3'); // Sound effect when opening door 
 

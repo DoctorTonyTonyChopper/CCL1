@@ -1,5 +1,5 @@
 import { global } from "./global.js";
-import { Shuriken } from "../gameObjects/shuriken.js"; // Ensure correct path
+import { Shuriken } from "../gameObjects/shuriken.js"; 
 import {shurikenEffect } from "./sound.js";
 
 

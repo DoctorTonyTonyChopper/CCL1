@@ -34,10 +34,6 @@ class Heart extends BaseGameObject {
         }
     }
 
-    /* draw = function () {
-         global.ctx.fillStyle = "#000000";
-         global.ctx.fillRect(this.x, this.y, this.width, this.height);
-     }*/
 
     constructor(x, y, width, height) {
         super(x, y, width, height);

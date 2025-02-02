@@ -41,7 +41,7 @@ class Skeleton extends BaseGameObject {
                 this.x = collidingObject.x + 100;
             }
             dmgEffect.play();
-            const gameContainer = document.getElementById("gameContainer"); // Replace with your actual canvas ID
+            const gameContainer = document.getElementById("gameContainer"); 
 
             // Add the red glow class
             gameContainer.classList.add("gameContainer-glow-red");
@@ -75,7 +75,6 @@ class Skeleton extends BaseGameObject {
 
     constructor(x, y, width, height) {
         super(x, y, width, height);
-        //this.loadImages(["./images/apple.png"]);
         this.loadImagesFromSpritesheet("./images/spritesheets/BODY_player.png", 9, 4, 9);
         this.switchCurrentSprites(18, 18);
         this.updateHealthDisplay();
