@@ -1,6 +1,6 @@
 # 🎮 **Game Title** 
 
-> **Short Pitch**: > Infiltrate the facility where your body is held and try to retrieve it! In this retro-inspired jump and run platformer, obstacles like spikes and robot and drone enemies await you with the sole purpose to stop you. Collect hearts to earn health and shuriken to stock up on ammo to defy your enemies and kill them. 
+> **Short Pitch**: Infiltrate the facility where your body is held and try to retrieve it! In this retro-inspired jump and run platformer, obstacles like spikes and robot and drone enemies await you with the sole purpose to stop you. Collect hearts to earn health and shuriken to stock up on ammo to defy your enemies and kill them. 
 
 
 ---
