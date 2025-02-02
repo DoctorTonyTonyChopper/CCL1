@@ -2,6 +2,9 @@
 
 Hi, I accidentally deleted my diary file and put it in my project folder again by dragging and dropping (I had a backup). Now it says that I created my diary today, however, I promise that I did this diary starting from the first day and updated it every day religiously haha.
 
+✅ means that I did it on that day
+❌ mean that I did not
+
 ******************
 
 ### Day 1 13-01-2025
@@ -35,7 +38,6 @@ Plan for the day:
 - Make shuriken throwing mechanic (when they touch enemies, they die) ✅
     - Shuriken should disappear after 0.25 seconds ✅
     - Player should throw the Shuriken to the direction they are facing ✅
-    - different sprite for when the player shoots the shuriken(?) ❌
 - Set up Github properly, learn how to push and pull ✅
 
 
@@ -157,13 +159,10 @@ WHEN I COLLIDE WITH THE DOOR IN THE FIRST LEVEL, displayGameFinishedScreen gets 
 - Have fun, lol ✅
 
 
-### 01-02-2025
-- Adjust the names in the code 🚨🚨
-- Add a proper background (image) for the website 👨🏽‍🔧
-- Adjust sound for drone 👨🏽‍🔧
-- Adjust sound for enemy 👨🏽‍🔧
-- Mute music button 👨🏽‍🔧
-
+### 02-02-2025
+- Adjust the names in the code ✅
+- Add sound effect for collecting shuriken ✅
+- Add sound effect for Drone death/destruction ✅
 
 ------
 
@@ -184,6 +183,7 @@ WHEN I COLLIDE WITH THE DOOR IN THE FIRST LEVEL, displayGameFinishedScreen gets 
 
 What I didn't do myself:
 - Level backgrounds (I put the tiles together from assets, though)
+- Capsule sprite (I did alter the sprite a little though to make the person inside the capsule look more feminine, etc.)
 
 
 
