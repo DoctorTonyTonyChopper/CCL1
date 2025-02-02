@@ -1,4 +1,4 @@
-# 🎮 **Game Title** 
+# 🎮 **Project_INFILTRATION** 
 
 > **Short Pitch**: Infiltrate the facility where your body is held and try to retrieve it! In this retro-inspired jump and run platformer, obstacles like spikes and robot and drone enemies await you with the sole purpose to stop you. Collect hearts to earn health and shuriken to stock up on ammo to defy your enemies and kill them. 
 
@@ -88,11 +88,11 @@ Below are the sprites used to create characters and objects in the game, all of 
 
 ### What went well:
 - **Creative Design:** I knew which kind of aestehtic I was going for since I started the game (2D-retro-style). I also knew which main character I was gonna use and had several ides for enemies in my mind. Drawing these was probably the easiest part of it all. 
-- **Schedule** I had a lot of stuff implemented after the first week already. I would say that I had a pretty good pace, until bugs appeared and started to frustrate me. However, I was done with the core game quickly and thus was able to add more optional stuff earlier than thought. 
+- **Schedule:** I had a lot of stuff implemented after the first week already. I would say that I had a pretty good pace, until bugs appeared and started to frustrate me. However, I was done with the core game quickly and thus was able to add more optional stuff earlier than thought. 
 
 ### Challenges:
 - **Debugging:** The debugging process was most definitely my personal hell and what I hated the most. Fixing one problem caused another, which was VERY frustrating. But in the end, thankfully everything worked out (I think). I am glad for the support I got from tutors, friends and myself, hihi.
-- **Bug Fixes:** Handling collisions and edge cases for gravity mechanics was tricky.
+- **Bug Fixes:** For example, my player started to jump over the move trigger, which meant that the canvas would not move anymore. Also, when I collided with the Door on the first level, it displayed the gameFinishedScreen, instead of taking me to the second level. Thankfully, the tutors helped me fix this issue, but it was so annoying trying to figure out what's wrong, etc.
 
 ### Lessons Learned:
 - **Make it functional first:** It's important to have a functioning base first. Once you have that, you can start implementing more advanced stuff that enhances the game. Just make sure that the core is finished before doing so.

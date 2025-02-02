@@ -167,7 +167,7 @@ WHEN I COLLIDE WITH THE DOOR IN THE FIRST LEVEL, displayGameFinishedScreen gets 
 ------
 
 
-### Everything I did on my own that I should tell in the presentation
+### Every art stuff that I did on my own:
 - Player sprites + movement 🤗
 - Enemy sprite 🤗
 - Drone sprite 🤗
