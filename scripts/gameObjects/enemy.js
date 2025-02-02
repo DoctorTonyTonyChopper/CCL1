@@ -1,6 +1,8 @@
 import { BaseGameObject } from "./baseGameObject.js";
 import { global } from "../modules/global.js";
 import { Shuriken } from "./shuriken.js";
+import { enemyDeathEffect } from "../modules/sound.js";
+
 
 class Enemy extends BaseGameObject {
     name = "Enemy";
@@ -16,6 +18,7 @@ class Enemy extends BaseGameObject {
     reactToCollision = function (collidingObject) {
         if (collidingObject.name == "Shuriken") {
             this.active = false; // Enemy disappears once colliding with the shuriken
+            enemyDeathEffect.play();
         }
     }
 

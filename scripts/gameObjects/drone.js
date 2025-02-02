@@ -1,5 +1,7 @@
 import { BaseGameObject } from "./baseGameObject.js";
 import { global } from "../modules/global.js";
+import { droneDeathEffect } from "../modules/sound.js";
+
 
 class Drone extends BaseGameObject {
     name = "Drone";
@@ -13,6 +15,8 @@ class Drone extends BaseGameObject {
     reactToCollision = function (collidingObject) {
         if (collidingObject.name == "Shuriken") {
             this.active = false; // If the drone collides with the shuriken, the drone disappears
+            droneDeathEffect.play();
+
         }
     };
 

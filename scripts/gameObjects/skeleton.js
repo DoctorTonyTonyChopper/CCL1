@@ -3,7 +3,7 @@ import { global } from "../modules/global.js";
 import { setupGame1, displayGameOverScreen } from "../modules/main.js";
 import { Shuriken } from "./shuriken.js";
 import { Spikes } from "./spikes.js";
-import { dmgEffect, healthEffect } from "../modules/sound.js";
+import { dmgEffect, healthEffect, shurikenCollectEffect } from "../modules/sound.js";
 
 
 class Skeleton extends BaseGameObject {
@@ -26,7 +26,8 @@ class Skeleton extends BaseGameObject {
         }
         if (collidingObject.name == "ShurikenCollect") {
             this.shurikenCount++
-            this.updateShurikenDisplay();
+            this.updateShurikenDisplay()
+            shurikenCollectEffect.play();
         }
 
         if (collidingObject.name == "Enemy" || collidingObject.name == "Spikes" || collidingObject.name == "Drone") {

@@ -138,6 +138,7 @@ function setupGame() {
 
     backgroundMusic.loop = true;
     backgroundMusic.play();
+    backgroundMusic.volume = 0.1;
 
     resetGlobals();
     global.playerObject = new Skeleton(0, 400, 80, 80);
@@ -204,6 +205,7 @@ function setupGame1() {
 
     backgroundMusic.loop = true;
     backgroundMusic.play();
+    backgroundMusic.volume = 0.1;
 
     resetGlobals();
     global.playerObject = new Skeleton(0, 400, 80, 80);
