@@ -15,7 +15,7 @@
 ### Main Gameplay:
 <div style="text-align: center;">
   <img src="/images/gameplayScreenshot.png" alt="Gameplay Screenshot" width="600">
-  <p>**Figure 1: Example of gameplay in action**</p>
+  <p>*Figure 1: Example of gameplay in action*</p>
 </div>
 
 ---
@@ -71,14 +71,14 @@ Below are the sprites used to create characters and objects in the game, all of 
 ### Door
 
 <div style="text-align: center;">
-  <img src="/images/spikes.png" alt="Enemy Spikes Image" width="500">
+  <img src="/images/door.png" alt="Enemy Spikes Image" width="500">
   <p>*Figure 7: Door you collide with on the first level to proceed to the second level.*</p>
 </div>
 
 ### Capsule
 
 <div style="text-align: center;">
-  <img src="/images/spikes.png" alt="Enemy Spikes Image" width="500">
+  <img src="/images/capsule.png" alt="Enemy Spikes Image" width="500">
   <p>*Figure 8: The capsule in which your body resides. Once you reach it and collide with it, the game is cleared.*</p>
 </div>
 
